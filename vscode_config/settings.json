@@ -1,0 +1,399 @@
+{
+    // 编辑器基础设置
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.autoIndent": "full",
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true, // 使用空格而非制表符
+    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "editor.autoClosingQuotes": "beforeWhitespace",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.formatOnType": true,
+    "editor.suggest.filterGraceful": false,
+    "editor.wordWrap": "on",
+
+    // Double Line 插件
+    "editor.lineNumbers": "relative",
+    "editor.glyphMargin": true,
+
+    // 杂项
+    "files.autoSave": "onWindowChange",
+    "window.dialogStyle": "custom", // 窗口样式
+    "editor.mouseWheelZoom": true, // 允许鼠标滚轮滑动控制字体大小
+    "debug.showBreakpointsInOverviewRuler": true, // 展示断点位置
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.autoGuessEncoding": true,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "auto",
+
+    // 代理设置
+    "http.proxy": "http://127.0.0.1:7890",
+    "http.proxyAuthorization": null,
+
+    // Vim 编辑器设置
+    "vim.useSystemClipboard": false,
+    "vim.useCtrlKeys": false,
+
+    // Git 设置
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "git.enableSmartCommit": true,
+
+    // 拼写检查
+    "cSpell.enabled": true,
+    "cSpell.ignoreWords": ["Deralive", "ECNU", "ecnu"],
+
+    // FittenCode 自动补全设置
+    "fittencode.languagePreference.displayPreference": "zh-cn",
+    "fittencode.languagePreference.commentPreference": "zh-cn",
+
+    // CPH 算法竞赛设置
+    // 最好的 Vscode C++ 竞赛向配置教程：https://www.bilibili.com/video/BV1fVxCeVE9q
+    "cph.general.defaultLanguage": "cpp",
+    "cph.general.useShortCodeForcesName": true,
+    "cph.language.cpp.SubmissionCompiler": "GNU G++20 13.2 (64 bit, winlibs)",
+    "cph.language.cpp.Args": "-std=c++20",
+    "labuladong-leetcode.workspaceFolder": "C:\\Users\\26421\\.lcpr",
+    "cph.language.cpp.Command": "clang++",
+
+    // Code-Runner 设置
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "zig": "zig run",
+        // 将编译标准修改为 C++20
+        "cpp": "cd $dir && clang++ -std=c++20 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runghc",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName",
+        "mojo": "mojo run",
+        "erlang": "escript",
+        "spwn": "spwn build",
+        "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+        "gleam": "gleam run -m $fileNameWithoutExt"
+    },
+
+    // 让 Code-Runner 走终端，运行之前保存文件
+    "code-runner.runInTerminal": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.saveFileBeforeRun": true,
+
+    // Error Lens 高亮代码错误提示插件
+    // https://github.com/usernamehw/vscode-error-lens/blob/master/docs/docs.md#errorlensfontsize
+    "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+    "errorLens.fontSize": "12px",
+    "errorLens.margin": "100px",
+    "errorLens.padding": "2px 0.5ch",
+    "errorLens.borderRadius": "0.3em",
+    "errorLens.messageBackgroundMode": "message",
+    "errorLens.messageTemplate": "$severity $message",
+    "errorLens.severityText": ["❌", "⚠", "ℹ", "📗"],
+    "errorLens.statusBarColorsEnabled": true,
+    "errorLens.enableOnDiffView": true,
+    "errorLens.gutterIconsEnabled": true,
+    "errorLens.gutterIconSet": "circle",
+    "errorLens.decorations": {
+        "errorMessage": {
+            "textDecoration": ";border:1.2px dashed #e4545470;text-shadow:1px 1px 2px #e4545470;border-radius:0.3em;padding:0 0.5ch;"
+        }
+    },
+
+    // 来源：https://www.bilibili.com/video/BV1Hd4y1o7CN
+    // Path Intellisense 路径感知
+    "typescript.suggest.paths": false,
+    "javascript.suggest.paths": false,
+    "path-intellisense.autoSlashAfterDirectory": false,
+
+    // Code Snap 代码截图工具
+    "codesnap.backgroundColor": "#A4B0BB",
+    "codesnap.boxShadow": "rgba(0, 0, 0, 0.6) 5px 5px 15px 5px",
+
+    // 主题设置
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Pro Monokai Darker",
+
+    // Prettier 设置
+    // 此处是全局设置，可以进入 https://prettier.io/playground 进行单语言设置
+    "prettier.semi": true, // 句尾是否填加分号
+    "prettier.singleQuote": false, //是否使用单引号
+    "prettier.trailingComma": "none", //禁止随时添加逗号
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 200, //每行代码的限制长度
+    "prettier.proseWrap": "never", // 文本换行
+    "prettier.bracketSpacing": true,
+    "prettier.useEditorConfig": false, // 在对象字面量的花括号内侧使用空格作为间隔（true: { foo: bar } false: {foo: bar}）
+    "prettier.bracketSameLine": true,
+    "prettier.endOfLine": "auto",
+
+    // Peacock 多窗口显色设置
+    "peacock.favoriteColors": [
+        {
+            "name": "Red",
+            "value": "#FF6347"
+        },
+        {
+            "name": "Turquoise Blue",
+            "value": "#40E0D0"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#61dafb"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Svelte Orange",
+            "value": "#ff3d00"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        },
+        {
+            "name": "AntiqueWhite",
+            "value": "#FAEBD7"
+        }
+    ],
+
+    // Latex 编辑设置
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    // 用于 LateX 代码格式化，需要安装 Latexindent，地址：https://ctan.org/tex-archive/support/latexindent
+    // 配置教程：https://github.com/James-Yu/LaTeX-Workshop/wiki/Format
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "latexindent",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOCFILE%"]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOCFILE%"]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "-outdir=%OUTDIR%", "%DOCFILE%"]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": ["%DOCFILE%"]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": ["xelatex"]
+        },
+        {
+            "name": "PDFLaTeX",
+            "tools": ["pdflatex"]
+        },
+        {
+            "name": "BibTeX",
+            "tools": ["bibtex"]
+        },
+        {
+            "name": "LaTeXmk",
+            "tools": ["latexmk"]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.synctex.gz",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "latex-workshop.view.pdf.viewer": "tab",
+
+    // IDF 编译设置
+    "idf.gitPathWin": "C:\\Users\\26421\\.espressif\\tools\\idf-git\\2.39.2\\cmd\\git.exe",
+    "idf.espIdfPathWin": "d:\\Espressif\\frameworks\\esp-idf-v5.3.1",
+    "idf.pythonBinPathWin": "C:\\Users\\26421\\.espressif\\python_env\\idf5.3_py3.11_env\\Scripts\\python.exe",
+    "idf.toolsPathWin": "C:\\Users\\26421\\.espressif",
+    "idf.customExtraPaths": "C:\\Users\\26421\\.espressif\\tools\\xtensa-esp-elf-gdb\\14.2_20240403\\xtensa-esp-elf-gdb\\bin;C:\\Users\\26421\\.espressif\\tools\\riscv32-esp-elf-gdb\\14.2_20240403\\riscv32-esp-elf-gdb\\bin;C:\\Users\\26421\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20240530\\xtensa-esp-elf\\bin;C:\\Users\\26421\\.espressif\\tools\\riscv32-esp-elf\\esp-13.2.0_20240530\\riscv32-esp-elf\\bin;C:\\Users\\26421\\.espressif\\tools\\esp32ulp-elf\\2.38_20240113\\esp32ulp-elf\\bin;C:\\Users\\26421\\.espressif\\tools\\cmake\\3.24.0\\bin;C:\\Users\\26421\\.espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20240318\\openocd-esp32\\bin;C:\\Users\\26421\\.espressif\\tools\\ninja\\1.11.1;C:\\Users\\26421\\.espressif\\tools\\idf-exe\\1.0.3;C:\\Users\\26421\\.espressif\\tools\\ccache\\4.8\\ccache-4.8-windows-x86_64;C:\\Users\\26421\\.espressif\\tools\\dfu-util\\0.11\\dfu-util-0.11-win64;C:\\Users\\26421\\.espressif\\tools\\esp-rom-elfs\\20240305",
+    "idf.customExtraVars": {
+        "OPENOCD_SCRIPTS": "C:\\Users\\26421\\.espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",
+        "IDF_CCACHE_ENABLE": "1",
+        "ESP_ROM_ELF_DIR": "C:\\Users\\26421\\.espressif\\tools\\esp-rom-elfs\\20240305/"
+    },
+    "idf.pythonInstallPath": "C:\\Users\\26421\\.espressif\\tools\\idf-python\\3.11.2\\python.exe",
+    "idf.hasWalkthroughBeenShown": true,
+
+    // Typst 编辑设置
+    "[typst]": {
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    "[typst-code]": {
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+
+    // AutoHotKey 编辑设置
+    "AHK++.v1.file": {
+        "interpreterPath": "C:/Program Files/AutoHotkey/v2/AutoHotkey64_UIA.exe",
+        "helpPath": "C:/Program Files/AutoHotkey/v2/AutoHotkey.chm"
+    },
+
+    // Pylance - python 编辑优化
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.callArgumentNames": "partial",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.typeCheckingMode": "standard",
+
+    // 基于 Clang 的 Cpp 配置
+    "clangd.arguments": ["--query-driver=D:/llvm/bin/clang++.exe", "--header-insertion=never"],
+    "clangd.fallbackFlags": ["-std=c++20"],
+    // 让格式化工具走 4 缩进
+    "[cpp]": {
+        "editor.defaultFormatter": "demiaochen.clang-format-indent-4"
+    },
+
+    // 若不适用 Clang，而使用 Microsoft 自带的：
+
+    // Cpp 编译设置
+    "clang.cxxflags": ["-std=c++11"],
+    "clang.cflags": ["-std=c99"],
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.configureOnOpen": true,
+    "C_Cpp.default.compilerPath": "D:\\mingw64\\bin\\g++.exe",
+    "cmake.pinnedCommands": ["workbench.action.tasks.configureTaskRunner", "workbench.action.tasks.runTask"],
+
+    // C++ 自动格式化操作
+    "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.vcFormat.newLine.beforeElse": false,
+    "C_Cpp.vcFormat.space.insertAfterSemicolon": true,
+    "C_Cpp.vcFormat.indent.caseLabels": true,
+    "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
+    "C_Cpp.vcFormat.newLine.beforeCatch": false,
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+    "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+    "C_Cpp.vcFormat.newLine.beforeWhileInDoWhile": true,
+    "C_Cpp.vcFormat.space.beforeEmptySquareBrackets": true,
+    "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
+    "C_Cpp.vcFormat.indent.withinParentheses": "alignToParenthesis",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.updateDelay": 1000,
+    "C_Cpp.codeAnalysis.clangTidy.args": [""],
+    "C_Cpp.codeAnalysis.clangTidy.checks.enabled": ["clang-analyzer-*"],
+    "C_Cpp.intelliSenseEngine": "disabled",
+
+    // Json 文件格式
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Jsonc 文件格式
+    "[jsonc]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.confirmSaveUntitledWorkspace": false
+}
