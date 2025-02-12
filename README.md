@@ -48,3 +48,6 @@ Stores Deralive's configuration files.
 - **gu**: 访问上一层网站
 - **gi**: 进入输入框选择模式
 
+## Others
+- Ctrl + Alt + W：打开微信
+- Ctrl + Alt + M：打开翻译小窗
