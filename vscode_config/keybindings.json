@@ -171,5 +171,30 @@
         "key": "ctrl+l alt+b",
         "command": "-latex-workshop.build",
         "when": "config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "typst-preview.preview",
+        "when": "editorLangId == 'typst'"
+    },
+    {
+        "key": "ctrl+k v",
+        "command": "-typst-preview.preview",
+        "when": "editorLangId == 'typst'"
+    },
+    {
+        "key": "ctrl+shift+2",
+        "command": "-extension.vim_ctrl+shift+2",
+        "when": "editorTextFocus && vim.active && vim.use<C-shift+2>"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "latex-workshop.build",
+        "when": "editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-latex-workshop.build",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/"
     }
 ]

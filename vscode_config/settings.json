@@ -1,4 +1,7 @@
 {
+    // https://vscode.cool/
+    // 这是一个好东西，里面存有一些关于 VSCode 的配置的技巧
+
     // 编辑器基础设置
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
@@ -60,6 +63,7 @@
     "cph.general.useShortCodeForcesName": true,
     "cph.language.cpp.SubmissionCompiler": "GNU G++20 13.2 (64 bit, winlibs)",
     "cph.language.cpp.Args": "-std=c++20",
+    "labuladong-leetcode.workspaceFolder": "C:\\Users\\26421\\.lcpr",
     "cph.language.cpp.Command": "clang++",
 
     // Code-Runner 设置
@@ -161,8 +165,7 @@
 
     // 主题设置
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "One Dark Pro Monokai Darker",
-    "labuladong-leetcode.workspaceFolder": "",
+    "workbench.colorTheme": "SynthWave '84",
 
     // Prettier 设置
     // 此处是全局设置，可以进入 https://prettier.io/playground 进行单语言设置
@@ -325,11 +328,13 @@
 
     // Typst 编辑设置
     "[typst]": {
-        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+        "pasteImage.insertPattern": "#figure(\n  image(\"${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}\", width: 100%),\n  caption: \"\",\n) <>"
     },
     "[typst-code]": {
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
+    "tinymist.formatterMode": "typstyle",
 
     // AutoHotKey 编辑设置
     "AHK++.v1.file": {
@@ -359,6 +364,7 @@
     "clang.cflags": ["-std=c99"],
     "cmake.showOptionsMovedNotification": false,
     "cmake.configureOnOpen": true,
+    "C_Cpp.default.compilerPath": "D:\\mingw64\\bin\\g++.exe",
     "cmake.pinnedCommands": ["workbench.action.tasks.configureTaskRunner", "workbench.action.tasks.runTask"],
 
     // C++ 自动格式化操作
@@ -404,5 +410,35 @@
     "evenBetterToml.formatter.indentEntries": true,
 
     // HTML 格式缩进开启
-    "html.format.indentInnerHtml": true
+    "html.format.indentInnerHtml": true,
+    "explorer.confirmPasteNative": false,
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+        "*.svg": "default"
+    },
+
+    // 使用 PasteImage 自动填充
+    "pasteImage.path": "${currentFileDir}/assets/${currentFileNameWithoutExt}",
+    "pasteImage.defaultName": "YMMDDHHmmss",
+    "pasteImage.namePrefix": "img-",
+
+    "cSpell.userWords": ["Colorbox", "showybox"],
+
+    // Animations
+    "vscode_custom_css.imports": ["file:///c:/Users/26421/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"],
+    "animations.CursorAnimation": true,
+    "KeilAssistant.MDK.Uv4Path": "D:\\Keil5\\UV4\\UV4.exe",
+
+    // 设置为 false 可以关闭文件夹的紧凑模式
+    "explorer.compactFolders": false,
+    "git-graph.commitDetailsView.fileView.fileTree.compactFolders": false,
+    "scm.compactFolders": false,
+
+    // 光标和工作区平滑移动设置
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    "workbench.reduceMotion": "on",
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true
 }
