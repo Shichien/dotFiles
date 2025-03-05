@@ -59,3 +59,18 @@ Stores Deralive's configuration files.
 ## Others
 - Ctrl + Alt + W：打开微信
 - Ctrl + Alt + M：打开翻译小窗
+- [AltSnap](https://github.com/RamonUnch/AltSnap)：按住 Alt 键拖动或缩放窗口
+- [Alt-Tab Terminator](https://www.ntwind.com/software/alttabter.html)：更好的 Alt-Tab
+- 可以使用 Alt + Esc 键快速在两个窗口之间切换
+
+## Tools Collection
+- [KMCounter](https://github.com/telppa/KMCounter): 采用 AutoHotKey 编写的统计键盘信息热力图
+- [EverythingToolBar](https://github.com/srwi/EverythingToolbar): 优化至系统内的 [Everything](https://www.voidtools.com/support/everything) 的搜索工具栏
+  - 使用 Win + Alt + S 唤出
+- [Sunshine](https://github.com/LizardByte/Sunshine): N 卡串流必备
+- [Moonlight](https://github.com/moonlight-stream/moonlight-qt): 配套 Sunshine 使用
+- [ParsecVDD](https://github.com/nomi-san/parsec-vdd): 虚拟显示屏
+- [Ditto](https://github.com/sabrogden/Ditto): 优质的剪贴板存储工具
+- [PowerToys](https://github.com/microsoft/PowerToys): 目前常使用的功能：
+  - Ctrl + Win + T 窗口置顶
+  - Ctrl + Space 速览
