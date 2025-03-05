@@ -6,7 +6,7 @@ Stores Deralive's configuration files.
 于左下角 `设置->配置文件` 中可以直接导入 `vscode-config.code-profile`，可以一键配置：
 - Plugins、Key Bindings、Themes、Workspace
 - 特色:
-    - 使用 LLVM 实现走 Clang++ 编译 C++ 代码
+    - 使用 LLVM 实现走 Clang++ 编译 C++ 代码（注意：万能头文件应置于 v1/bits/stdc++.h 中）
     - 使用不同的 LSP + ErrorLen 插件实现代码报错提示
     - 使用 Double Lines 插件为 Vim 实现 Relative Line 显示
     - 配置 Prettier 以为不同语言配置不同的代码格式化方式
