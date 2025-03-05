@@ -48,6 +48,14 @@ Stores Deralive's configuration files.
 - **gu**: 访问上一层网站
 - **gi**: 进入输入框选择模式
 
+## CapsLock Plus
+- CapsLock + Q 打开 QBar，在任何界面快速打开浏览器进行搜索
+  - 可选项有 Bing、Youtube、Github、Wiki、Bilibili、All
+  - 在输入 `All <Content>` 后同时开启五个搜索引擎
+- CapsLock + O / Enter，模仿 Vim 模式新建一行
+- CapsLock + I，模仿 Vim 模式进入行首
+- CapsLock + Backspace，模仿 Vim 模式删除一行
+
 ## Others
 - Ctrl + Alt + W：打开微信
 - Ctrl + Alt + M：打开翻译小窗
