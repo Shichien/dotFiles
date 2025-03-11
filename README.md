@@ -52,13 +52,14 @@ Stores Deralive's configuration files.
 - CapsLock + Q 打开 QBar，在任何界面快速打开浏览器进行搜索
   - 可选项有 Bing、Youtube、Github、Wiki、Bilibili、All
   - 在输入 `All <Content>` 后同时开启五个搜索引擎
+  - 在输入 `cmd <Command>` 后可以快速执行 Powershell 命令
 - CapsLock + O / Enter，模仿 Vim 模式新建一行
 - CapsLock + I，模仿 Vim 模式进入行首
 - CapsLock + Backspace，模仿 Vim 模式删除一行
 
 ## Others
 - Ctrl + Alt + W：打开微信
-- Ctrl + Alt + M：打开翻译小窗
+- Ctrl + Alt + M：打开翻译小窗（使用 [有道翻译](https://fanyi.youdao.com/download-Windows/) 实现）
 - [AltSnap](https://github.com/RamonUnch/AltSnap)：按住 Alt 键拖动或缩放窗口
 - [Alt-Tab Terminator](https://www.ntwind.com/software/alttabter.html)：更好的 Alt-Tab
 - 可以使用 Alt + Esc 键快速在两个窗口之间切换
