@@ -67,6 +67,7 @@ Stores Deralive's configuration files.
 - 可以使用 `Alt + Esc` 键快速在两个窗口之间切换
 
 ## Tools Collection
+- [LockLook](https://blog.csdn.net/Steven_Start/article/details/109218714)：一个实时显示 CapsLock、NumLock 等状态的插件
 - [KMCounter](https://github.com/telppa/KMCounter): 采用 AutoHotKey 编写的统计键盘信息热力图
 - [EverythingToolBar](https://github.com/srwi/EverythingToolbar): 优化至系统内的 [Everything](https://www.voidtools.com/support/everything) 的搜索工具栏
   - 使用 `Win + Alt + S` 唤出
