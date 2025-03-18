@@ -71,7 +71,7 @@ Stores Deralive's configuration files.
 - [KMCounter](https://github.com/telppa/KMCounter): 采用 AutoHotKey 编写的统计键盘信息热力图
 - [EverythingToolBar](https://github.com/srwi/EverythingToolbar): 优化至系统内的 [Everything](https://www.voidtools.com/support/everything) 的搜索工具栏
   - 使用 `Win + Alt + S` 唤出
-- [AnyTXT][https://anytxt.net/]: 通过建立索引进行全盘文件内容搜索的工具，使用 `Alt+Q` 呼出
+- [AnyTXT](https://anytxt.net): 通过建立索引进行全盘文件内容搜索的工具，使用 `Alt+Q` 呼出
 - [Sunshine](https://github.com/LizardByte/Sunshine): N 卡串流必备
 - [Moonlight](https://github.com/moonlight-stream/moonlight-qt): 配套 Sunshine 使用
 - [ParsecVDD](https://github.com/nomi-san/parsec-vdd): 虚拟显示屏
@@ -79,3 +79,4 @@ Stores Deralive's configuration files.
 - [PowerToys](https://github.com/microsoft/PowerToys): 目前常使用的功能：
   - `Ctrl + Win + T` 窗口置顶
   - `Ctrl + Space` 速览
+- [AudioRelay](https://audiorelay.net/)：可通过 USB 网络共享建立局域网，将电脑音频和手机音频同时在一个蓝牙耳机中进行播放
