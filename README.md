@@ -29,27 +29,27 @@ Stores Deralive's configuration files.
 - 使用 `<<` 和 `>>` 进行前进和后退
 
 ### 搜索框
-- **o**: 搜索混合内容并在新标签页打开
-- **b**: 搜索已隐藏内容并在新标签页打开
-- **T**: 在所有标签页中搜索
+- `o`: 搜索混合内容并在新标签页打开
+- `b`: 搜索已隐藏内容并在新标签页打开
+- `T`: 在所有标签页中搜索
 
 ### 标签页和窗口
-- **L**: 切换到右侧标签页
-- **H**: 切换到左侧标签页
-- **<c-n>**: 打开新的标签页
-- **x**: 关闭当前标签页
-- **<c-w>**: 移动到当前标签页的下一个窗口
-- **<a->**: 切换到最近访问的上一个标签页
+- `L`: 切换到右侧标签页
+- `H`: 切换到左侧标签页
+- `<c-n>`: 打开新的标签页
+- `x`: 关闭当前标签页
+- `<c-w>`: 移动到当前标签页的下一个窗口
+- `<a->`: 切换到最近访问的上一个标签页
   
 ### 其他功能
-- **yy**: 复制当前网页的 URL
-- **yyp**: 基于 `yy` 快速复制标签页
-- **yi**: 复制图片到剪贴板
-- **gu**: 访问上一层网站
-- **gi**: 进入输入框选择模式
+- `yy`: 复制当前网页的 URL
+- `yyp**: 基于 `yy` 快速复制标签页
+- `yi`: 复制图片到剪贴板
+- `gu`: 访问上一层网站
+- `gi`: 进入输入框选择模式
 
 ## CapsLock Plus
-- `CapsLock` + Q 打开 QBar，在任何界面快速打开浏览器进行搜索
+- `CapsLock + Q` 打开 QBar，在任何界面快速打开浏览器进行搜索
   - 可选项有 Bing、Youtube、Github、Wiki、Bilibili、All
   - 在输入 `All <Content>` 后同时开启五个搜索引擎
   - 在输入 `cmd <Command>` 后可以快速执行 Powershell 命令
@@ -71,7 +71,7 @@ Stores Deralive's configuration files.
 - [KMCounter](https://github.com/telppa/KMCounter): 采用 AutoHotKey 编写的统计键盘信息热力图
 - [EverythingToolBar](https://github.com/srwi/EverythingToolbar): 优化至系统内的 [Everything](https://www.voidtools.com/support/everything) 的搜索工具栏
   - 使用 `Win + Alt + S` 唤出
-- [AnyTXT](https://anytxt.net): 通过建立索引进行全盘文件内容搜索的工具，使用 `Alt+Q` 呼出
+- [AnyTXT](https://anytxt.net): 通过建立索引进行全盘文件内容搜索的工具，使用 `Alt + Q` 呼出
 - [Sunshine](https://github.com/LizardByte/Sunshine): N 卡串流必备
 - [Moonlight](https://github.com/moonlight-stream/moonlight-qt): 配套 Sunshine 使用
 - [ParsecVDD](https://github.com/nomi-san/parsec-vdd): 虚拟显示屏
