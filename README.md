@@ -56,6 +56,7 @@ Stores Deralive's configuration files.
 - `CapsLock + O / Enter`，模仿 Vim 模式新建一行
 - `CapsLock + I / A`，模仿 Vim 模式进入行首和行尾（模拟 `Home`、`End`）
 - `CapsLock + Backspace`，模仿 Vim 模式删除一行
+- `CapsLock + W`，快速打开一个在桌面上创建的记事本
 
 ## Others
 - `Ctrl + Alt + W`：打开微信
