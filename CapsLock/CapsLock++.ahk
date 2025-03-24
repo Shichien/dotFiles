@@ -66,3 +66,13 @@ CapsLock & i:: {
 CapsLock & a:: {
     Send "{End}"
 }
+
+; 使用 CapsLock + W 快速创建笔记
+CapsLock & w:: {
+    Current := A_Now
+    formatted := FormatTime(Current, 'dddd, MMMM dd, yyyy @ hh:mm:ss tt')
+    FilePath := A_Desktop . "\QuickNote-" . Current . ".txt"
+    Run("notepad.exe " . FilePath)
+    WinWaitClose("ahk_class Notepad")
+}
+
