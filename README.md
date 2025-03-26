@@ -82,3 +82,9 @@ Stores Deralive's configuration files.
   - `Ctrl + Space` 速览
 - [AudioRelay](https://audiorelay.net/)：可通过 USB 网络共享建立局域网，将电脑音频和手机音频同时在一个蓝牙耳机中进行播放
 - [Bluetooth Activity Viewer](https://www.nirsoft.net/utils/bluetooth_viewer.html)：可以实时查看 PC 端检测到的蓝牙设备，查看连接日志
+
+## HotKeys
+- Moonlight
+  - `<C-S-A-X>` 在窗口模式和全屏模式下切换
+  - `<C-S-A-V>` 将当前主机的剪贴板粘贴到被控端
+  - `<C-S-A-D>` 将当前串流窗口最小化
