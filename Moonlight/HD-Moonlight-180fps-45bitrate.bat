@@ -1,0 +1,1 @@
+moonlight stream <ip:port> "Desktop" --resolution 2560x1600 --no-vsync --fps 180 --bitrate 45 --display-mode fullscreen --multi-controller --no-quit-after --no-absolute-mouse --no-mouse-buttons-swap --no-touchscreen-trackpad --game-optimization --no-audio-on-host --no-mute-on-focus-loss --keep-awake --capture-system-keys fullscreen --video-codec AV1 --video-decoder hardware
