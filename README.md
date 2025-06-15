@@ -1,5 +1,6 @@
 # dotFiles
 Stores Deralive's configuration files.
+仅供自查，可参考配置。
 
 ## VSCode 配置
 
@@ -84,8 +85,15 @@ Stores Deralive's configuration files.
 - [Bluetooth Activity Viewer](https://www.nirsoft.net/utils/bluetooth_viewer.html)：可以实时查看 PC 端检测到的蓝牙设备，查看连接日志
 - [WinToys](https://apps.microsoft.com/detail/9p8ltpgcbzxd?launch=true&mode=full&hl=zh-cn&gl=us&ocid=bingwebsearch)：Windows 使用提升
 
-## HotKeys
-- Moonlight
+## Windows HotKeys
+- `Win + E`, `Win + R`, `Win + I`, `Win + P`, `Win + G`, `Win + H`, `Win + Z`, `Win + X`, `Win + V`, `Win + B`
+
+## Moonlight HotKeys
   - `<C-S-A-X>` 在窗口模式和全屏模式下切换
   - `<C-S-A-V>` 将当前主机的剪贴板粘贴到被控端
   - `<C-S-A-D>` 将当前串流窗口最小化
+  - `<C-S-A-Q>` 退出当前串流窗口
+  - `<C-S-A-F1>` 切换到第一个显示器
+  - `<C-S-A-F11>` 切换到第二个显示器
+  - `<C-S-A-S>` 显示串流精简信息，可配合 [Moonlight-qt(Axixi)](https://github.com/Axixi2233/moonlight-qt) 使用
+  - `<C-S-A-M>` 切换串流窗口鼠标捕获模式
