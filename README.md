@@ -51,20 +51,17 @@ Stores Deralive's configuration files.
 
 ## CapsLock Plus
 - `CapsLock + Q` 打开 QBar，在任何界面快速打开浏览器进行搜索
-  - 可选项有 Bing、Youtube、Github、Wiki、Bilibili、All
-  - 在输入 `All <Content>` 后同时开启五个搜索引擎
-  - 在输入 `cmd <Command>` 后可以快速执行 Powershell 命令
+  - 可选项有 `bing`、`youtube`、`github`、`wiki`、`bilibili`、`all`
+  - 在输入 `all <content>` 后同时开启五个搜索引擎
+  - 在输入 `cmd <command>` 后可以快速执行 Powershell 命令
 - `CapsLock + O / Enter`，模仿 Vim 模式新建一行
 - `CapsLock + I / A`，模仿 Vim 模式进入行首和行尾（模拟 `Home`、`End`）
 - `CapsLock + Backspace`，模仿 Vim 模式删除一行
 - `CapsLock + W`，快速打开一个在桌面上创建的记事本
 
 ## Others
-- `Ctrl + Alt + W`：打开微信
-- `Ctrl + Alt + M`：打开翻译小窗（使用 [有道翻译](https://fanyi.youdao.com/download-Windows/) 实现）
 - 使用 `Ctrl+ Win + T` 置顶当前窗口
 - 在文件夹中使用 `Ctrl + Space` 进行文件速览（基于 PowerToys）
-- [AltSnap](https://github.com/RamonUnch/AltSnap)：按住 `Alt` 键拖动或缩放窗口
 - [Alt-Tab Terminator](https://www.ntwind.com/software/alttabter.html)：更好的 `Alt-Tab`
 - 可以使用 `Alt + Esc` 键快速在两个窗口之间切换
 
@@ -87,6 +84,7 @@ Stores Deralive's configuration files.
 
 ## Windows HotKeys
 - `Win + E`, `Win + R`, `Win + I`, `Win + P`, `Win + G`, `Win + H`, `Win + Z`, `Win + X`, `Win + V`, `Win + B`
+- 其余的 Windows 快捷键均被禁用
 
 ## Moonlight HotKeys
   - `<C-S-A-X>` 在窗口模式和全屏模式下切换
@@ -97,3 +95,15 @@ Stores Deralive's configuration files.
   - `<C-S-A-F11>` 切换到第二个显示器
   - `<C-S-A-S>` 显示串流精简信息，可配合 [Moonlight-qt(Axixi)](https://github.com/Axixi2233/moonlight-qt) 使用
   - `<C-S-A-M>` 切换串流窗口鼠标捕获模式
+
+## Ctrl + Alt HotKeys
+- `Ctrl + Alt + Q`：打开 QQ
+- `Ctrl + Alt + W`：打开微信
+- `Ctrl + Alt + E`：打开 Edge
+- `Ctrl + Alt + A`：打开 Mathpix
+- `Ctrl + Alt + S`：打开 EverythingToolbar
+- `Ctrl + Alt + D`：打开翻译小窗（使用 [Pot 翻译](https://github.com/pot-app/pot-desktop) 实现）
+- `Ctrl + Alt + C`：打开 VSCode
+- `Ctrl + Alt + O`：打开 Obsidian
+- `Ctrl + Alt + P`：打开 WPS
+- `Ctrl + Alt + N`：打开 NetEase Music
