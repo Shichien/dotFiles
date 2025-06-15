@@ -1,7 +1,9 @@
 #Requires AutoHotkey v2.0
+CoordMode("Pixel", "Screen")
+CoordMode("Mouse", "Screen")
 
 CapsLock & q:: {
-    userInput := InputBox("可选项：Wiki、Bing、Youtube、Github、Bilibili、All", "引擎搜索", "w400 h100").Value
+    userInput := InputBox("可选项：Wiki、Bing、Youtube、Github、Bilibili、All、（cmd）", "引擎搜索", "w400 h100").Value
 
     if userInput {
         ; 分割输入为搜索引擎和搜索内容
@@ -34,6 +36,8 @@ CapsLock & q:: {
                 Run(youtubeUrl)
                 Run(githubUrl)
                 Run(bilibiliUrl)
+            case "cmd":
+                Run("powershell.exe -NoExit -Command " . searchContent)
             default:
                 Run(bingUrl)
         }
@@ -67,11 +71,115 @@ CapsLock & a:: {
     Send "{End}"
 }
 
-; 使用 CapsLock + W 创建快速笔记，使用 Lapce 编辑
+; 使用 CapsLock + W 创建快速笔记，使用 VSCode 编辑
 CapsLock & w:: {
     Current := A_Now
     formatted := FormatTime(Current, "yyyy-MM-dd_HH-mm-ss")
     FilePath := A_Desktop . "\QuickNote_" . formatted . ".md"
-    Run("lapce " . FilePath)
+    Run("code " . FilePath)
 }
 
+; Disable Win Hotkeys
+#a:: return         ; Disable Win + A : Action Center
+#c:: return         ; Disable Win + C : Cortana
+#f:: return         ; Disable Win + F : Feedback Hub
+#k:: return         ; Disable Win + K : Connect Wireless Displays
+#l:: return         ; Disable Win + L : Lock Computer
+#n:: return         ; Disable Win + N : Notification settings
+#o:: return         ; Disable Win + O : Device Orientation lock
+#q:: return         ; Disable Win + Q : Win Search
+#s:: return         ; Disable Win + S : Win Search
+#t:: return         ; Disable Win + T : Cycle Taskbar
+#u:: return         ; Disable Win + U : Accessibility Settings
+#w:: return         ; Disable Win + W : Windows Widgets
+#^o:: return        ; Disable Win + Ctrl + O: Open on-screen keyboard
+#^c:: return        ; Disable Win + Ctrl + C: Toggle color filter
+#^n:: return        ; Disable Win + Ctrl + N: Open Narrator settings
+#^s:: return        ; Disable Win + Ctrl + S: Open Windows Speech Recognition
+#Esc:: return       ; Disable Win + Esc: Close Magnifier
+#Enter:: return     ; Disable Win + Enter: Open Narrator
+#^Enter:: return    ; Disable Win + Ctrl + Enter: Open Narrator Settings
+
+; #NumpadAdd:: return  ; Disable Win + Numpad Plus: Open Magnifier and zoom in
+; #Equal:: return  ; Disable Win + Equal/Plus (main keyboard)
+
+; #NumpadSub:: return  ; Disable Win + Numpad Minus: Zoom out in Magnifier
+; #Hyphen:: return  ; Disable Win + Hyphen/Minus (main keyboard)
+
+; Volume control with Win + Plus/Minus
+#+:: Send "{Volume_Up}"            ; Win + Plus increases volume
+#-:: Send "{Volume_Down}"          ; Win + Minus decreases volume
+
+; Open Recycle Bin with Win + Delete
+#Delete:: Run "shell:RecycleBinFolder"
+
+ToggleWin(winTitle, exePath := "") {
+    if WinExist(winTitle) {
+        if WinActive(winTitle) {
+            WinMinimize()
+            return "Active"
+        } else {
+            WinActivate(winTitle)
+            return "Minimized"
+        }
+        return "Toggled"
+    } else {
+        if (exePath != "") {
+            Run(exePath)
+        }
+    }
+}
+
+; Open Obsidian with Ctrl + Alt + O
+^!o:: ToggleWin("ahk_exe Obsidian.exe", "")
+
+; Open VSCode with Ctrl + Alt + C
+^!c:: ToggleWin("ahk_exe Code.exe", "Code.exe")
+
+; Open WeChat with Ctrl + Alt + W
+
+; Open QQ with Ctrl + Alt + Q
+
+; Open Edge with Ctrl + Alt + E
+^!e:: ToggleWin("ahk_exe msedge.exe")
+
+; Open EverythingToolbar with Ctrl + Alt + S
+
+; Open Pot Player with Ctrl + Alt + D
+
+; Open WPS with Ctrl + Alt + P
+^!p:: ToggleWin("ahk_exe wps.exe")
+
+; Open NetEase Music with Ctrl + Alt + N
+^!n:: {
+    ; DrawSearchRectangle(1811, 1520, 2559, 1599)
+    if (WinExist("ahk_exe cloudmusic.exe")) {
+        if (WinActive("ahk_exe cloudmusic.exe")) {
+            WinMinimize("ahk_exe cloudmusic.exe")
+        } else {
+            MouseGetPos(&OriginalX, &OriginalY)
+            Found := ImageSearch(&FoundX, &FoundY, 1811, 1520, 2559, 1599, "*30 ./icons/netease_music.png")
+            if Found {
+                Click(FoundX + 16, FoundY + 16)
+                Sleep(50)
+                MouseMove(OriginalX, OriginalY, 0)
+            }
+        }
+    } else {
+        MouseGetPos(&OriginalX, &OriginalY)
+        Found := ImageSearch(&FoundX, &FoundY, 1811, 1520, 2559, 1599, "*30 ./icons/netease_music.png")
+        if Found {
+            Click(FoundX + 16, FoundY + 16)
+            Sleep(50)
+            MouseMove(OriginalX, OriginalY, 0)
+        }
+    }
+}
+
+DrawSearchRectangle(X, Y, W, H) {
+    MyGui := Gui("+AlwaysOnTop -Caption +ToolWindow +LastFound")
+    MyGui.BackColor := "EEAA99"
+    MyGui.Show("NoActivate NA x" X " y" Y " w" W " h" H)
+    WinSetTransparent(150)
+    SetTimer(() => MyGui.Destroy(), -3000)
+}
