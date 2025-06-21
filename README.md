@@ -65,6 +65,36 @@ Stores Deralive's configuration files.
 - [Alt-Tab Terminator](https://www.ntwind.com/software/alttabter.html)：更好的 `Alt-Tab`
 - 可以使用 `Alt + Esc` 键快速在两个窗口之间切换
 
+## Windows HotKeys
+- `Win + E`, `Win + R`, `Win + I`, `Win + P`, `Win + G`, `Win + H`, `Win + Z`, `Win + X`, `Win + V`, `Win + B`
+- 其余的 Windows 快捷键均被禁用
+
+## Moonlight HotKeys
+  - `<C-S-A-X>` 在窗口模式和全屏模式下切换
+  - `<C-S-A-V>` 将当前主机的剪贴板粘贴到被控端
+  - `<C-S-A-D>` 将当前串流窗口最小化
+  - `<C-S-A-Q>` 退出当前串流窗口
+  - `<C-S-A-F1>` 切换到第一个显示器
+  - `<C-S-A-F11>` 切换到第二个显示器
+  - `<C-S-A-S>` 显示串流精简信息，可配合 [Moonlight-qt(Axixi)](https://github.com/Axixi2233/moonlight-qt) 使用
+  - `<C-S-A-M>` 切换串流窗口鼠标捕获模式
+
+## Ctrl + Alt HotKeys
+- Quick Opening
+    - `Ctrl + Alt + Q`：打开 QQ
+    - `Ctrl + Alt + W`：打开微信
+    - `Ctrl + Alt + E`：打开 Edge
+    - `Ctrl + Alt + A`：打开 Mathpix
+    - `Ctrl + Alt + S`：打开 EverythingToolbar
+    - `Ctrl + Alt + D`：打开翻译小窗（使用 [Pot 翻译](https://github.com/pot-app/pot-desktop) 实现）
+    - `Ctrl + Alt + C`：打开 VSCode
+    - `Ctrl + Alt + O`：打开 Obsidian
+    - `Ctrl + Alt + P`：打开 WPS
+    - `Ctrl + Alt + N`：打开 NetEase Music
+- Coding Feature
+    - `Ctrl + Alt + V`: Paste Image
+    - `Ctrl + Alt + B`: Build
+ 
 ## Tools Collection
 - [LockLook](https://blog.csdn.net/Steven_Start/article/details/109218714)：一个实时显示 CapsLock、NumLock 等状态的插件
 - [KMCounter](https://github.com/telppa/KMCounter): 采用 AutoHotKey 编写的统计键盘信息热力图
@@ -81,29 +111,3 @@ Stores Deralive's configuration files.
 - [AudioRelay](https://audiorelay.net/)：可通过 USB 网络共享建立局域网，将电脑音频和手机音频同时在一个蓝牙耳机中进行播放
 - [Bluetooth Activity Viewer](https://www.nirsoft.net/utils/bluetooth_viewer.html)：可以实时查看 PC 端检测到的蓝牙设备，查看连接日志
 - [WinToys](https://apps.microsoft.com/detail/9p8ltpgcbzxd?launch=true&mode=full&hl=zh-cn&gl=us&ocid=bingwebsearch)：Windows 使用提升
-
-## Windows HotKeys
-- `Win + E`, `Win + R`, `Win + I`, `Win + P`, `Win + G`, `Win + H`, `Win + Z`, `Win + X`, `Win + V`, `Win + B`
-- 其余的 Windows 快捷键均被禁用
-
-## Moonlight HotKeys
-  - `<C-S-A-X>` 在窗口模式和全屏模式下切换
-  - `<C-S-A-V>` 将当前主机的剪贴板粘贴到被控端
-  - `<C-S-A-D>` 将当前串流窗口最小化
-  - `<C-S-A-Q>` 退出当前串流窗口
-  - `<C-S-A-F1>` 切换到第一个显示器
-  - `<C-S-A-F11>` 切换到第二个显示器
-  - `<C-S-A-S>` 显示串流精简信息，可配合 [Moonlight-qt(Axixi)](https://github.com/Axixi2233/moonlight-qt) 使用
-  - `<C-S-A-M>` 切换串流窗口鼠标捕获模式
-
-## Ctrl + Alt HotKeys
-- `Ctrl + Alt + Q`：打开 QQ
-- `Ctrl + Alt + W`：打开微信
-- `Ctrl + Alt + E`：打开 Edge
-- `Ctrl + Alt + A`：打开 Mathpix
-- `Ctrl + Alt + S`：打开 EverythingToolbar
-- `Ctrl + Alt + D`：打开翻译小窗（使用 [Pot 翻译](https://github.com/pot-app/pot-desktop) 实现）
-- `Ctrl + Alt + C`：打开 VSCode
-- `Ctrl + Alt + O`：打开 Obsidian
-- `Ctrl + Alt + P`：打开 WPS
-- `Ctrl + Alt + N`：打开 NetEase Music
