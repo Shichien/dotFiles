@@ -71,13 +71,14 @@ CapsLock & a:: {
     Send "{End}"
 }
 
+; Deprecated
 ; 使用 CapsLock + W 创建快速笔记，使用 VSCode 编辑
-CapsLock & w:: {
-    Current := A_Now
-    formatted := FormatTime(Current, "yyyy-MM-dd_HH-mm-ss")
-    FilePath := A_Desktop . "\QuickNote_" . formatted . ".md"
-    Run("code " . FilePath)
-}
+; CapsLock & w:: {
+;     Current := A_Now
+;     formatted := FormatTime(Current, "yyyy-MM-dd_HH-mm-ss")
+;     FilePath := A_Desktop . "\QuickNote_" . formatted . ".md"
+;     Run("code " . FilePath)
+; }
 
 ; Disable Win Hotkeys
 #a:: return         ; Disable Win + A : Action Center
@@ -176,10 +177,58 @@ ToggleWin(winTitle, exePath := "") {
     }
 }
 
-DrawSearchRectangle(X, Y, W, H) {
-    MyGui := Gui("+AlwaysOnTop -Caption +ToolWindow +LastFound")
-    MyGui.BackColor := "EEAA99"
-    MyGui.Show("NoActivate NA x" X " y" Y " w" W " h" H)
-    WinSetTransparent(150)
-    SetTimer(() => MyGui.Destroy(), -3000)
+global g_TempBox := ""
+
+CapsLock & w:: {
+    global g_TempBox
+    if IsObject(g_TempBox) {
+        g_TempBox.Destroy()
+    } else {
+        g_TempBox := TempBox()
+        g_TempBox.Show()
+    }
+    return
+}
+
+class TempBox {
+    __New() {
+        this.gui := Gui("+AlwaysOnTop +Resize", "Temp Box")
+        this.gui.SetFont("s12", "Consolas")
+        this.edit := this.gui.Add("Edit", "w300 h150 VScroll +Wrap")
+        this.button := this.gui.Add("Button", "x220 w80 Default", "Copy")
+
+        this.button.OnEvent("Click", this._CopyToClipboard.Bind(this))
+        this.gui.OnEvent("Escape", this._OnEscape.Bind(this))
+        this.gui.OnEvent("Size", this._OnSize.Bind(this))
+    }
+
+    Show() {
+        WinWidth := 300 + 30
+        xPos := A_ScreenWidth - 700
+        yPos := 50
+        this.gui.Show("x" xPos " y" yPos)
+    }
+
+    Destroy() {
+        global g_TempBox
+        this.gui.Destroy()
+        g_TempBox := ""
+    }
+
+    _CopyToClipboard(*) {
+        A_Clipboard := this.edit.Value
+        this.Destroy() ; 调用统一的销毁方法
+    }
+
+    _OnEscape(*) {
+        this.Destroy()
+    }
+
+    _OnSize(gui, MinMax, Width, Height) {
+        if (MinMax = -1)
+            return
+
+        this.edit.Move(10, 10, Width - 20, Height - 50)
+        this.button.Move(Width - 110, Height - 35)
+    }
 }
