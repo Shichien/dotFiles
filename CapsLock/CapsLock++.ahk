@@ -152,30 +152,7 @@ ToggleWin(winTitle, exePath := "") {
 ^!p:: ToggleWin("ahk_exe wps.exe")
 
 ; Open NetEase Music with Ctrl + Alt + N
-^!n:: {
-    ; DrawSearchRectangle(1811, 1520, 2559, 1599)
-    if (WinExist("ahk_exe cloudmusic.exe")) {
-        if (WinActive("ahk_exe cloudmusic.exe")) {
-            WinMinimize("ahk_exe cloudmusic.exe")
-        } else {
-            MouseGetPos(&OriginalX, &OriginalY)
-            Found := ImageSearch(&FoundX, &FoundY, 1811, 1520, 2559, 1599, "*30 ./icons/netease_music.png")
-            if Found {
-                Click(FoundX + 16, FoundY + 16)
-                Sleep(50)
-                MouseMove(OriginalX, OriginalY, 0)
-            }
-        }
-    } else {
-        MouseGetPos(&OriginalX, &OriginalY)
-        Found := ImageSearch(&FoundX, &FoundY, 1811, 1520, 2559, 1599, "*30 ./icons/netease_music.png")
-        if Found {
-            Click(FoundX + 16, FoundY + 16)
-            Sleep(50)
-            MouseMove(OriginalX, OriginalY, 0)
-        }
-    }
-}
+^!n:: ToggleWin("ahk_class OrpheusBrowserHost", "D:\NetEaseMusic\CloudMusic\cloudmusic.exe")
 
 global g_TempBox := ""
 
