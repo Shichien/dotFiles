@@ -1,5 +1,3 @@
--- Location: C:\\Users\\Username\\.wezterm.lua
-
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
@@ -43,6 +41,8 @@ config.keys = {
 
     { key = 'w', mods = 'CTRL', action = act.CloseCurrentTab { confirm = false }},
     { key = 'n', mods = 'CTRL', action = act.SpawnTab 'DefaultDomain'},
+
+    { key = 'v', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
 }
 
 -- Mouse Binding
