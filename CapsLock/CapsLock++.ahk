@@ -1,4 +1,5 @@
 #Requires AutoHotkey v2.0
+#SingleInstance Force
 CoordMode("Pixel", "Screen")
 CoordMode("Mouse", "Screen")
 
@@ -148,8 +149,8 @@ ToggleWin(winTitle, exePath := "") {
 
 ; Open Pot Player with Ctrl + Alt + D
 
-; Open WPS with Ctrl + Alt + P
-^!p:: ToggleWin("ahk_exe wps.exe")
+; Open SumatraPDF with Ctrl + Alt + P
+^!p:: ToggleWin("ahk_exe SumatraPDF.exe")
 
 ; Open NetEase Music with Ctrl + Alt + N
 ^!n:: ToggleWin("ahk_class OrpheusBrowserHost", "D:\NetEaseMusic\CloudMusic\cloudmusic.exe")
