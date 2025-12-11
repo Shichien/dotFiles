@@ -95,6 +95,11 @@ Stores Deralive's configuration files.
     - `Ctrl + Alt + V`: Paste Image
     - `Ctrl + Alt + B`: Build
  
+## Win + Ctrl HotKeys
+  - `Win + Ctrl + D`: Create a new desktop;
+  - `Win + Ctrl + F4`: Delete a existing desktop;
+  - `Win + Ctrl + <- / ->`: move to another desktop;
+ 
 ## Tools Collection
 - [LockLook](https://blog.csdn.net/Steven_Start/article/details/109218714)：一个实时显示 CapsLock、NumLock 等状态的插件
 - [KMCounter](https://github.com/telppa/KMCounter): 采用 AutoHotKey 编写的统计键盘信息热力图
