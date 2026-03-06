@@ -3,36 +3,63 @@
     // 这是一个好东西，里面存有一些关于 VSCode 的配置的技巧
 
     // 编辑器基础设置
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
+    // 全局缩进设置
     "editor.autoIndent": "full",
     "editor.indentSize": "tabSize",
     "editor.tabSize": 4,
+    "editor.fontSize": 14,
     "editor.insertSpaces": true, // 使用空格而非制表符
-    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+
+    // 格式化设置
+    // "files.autoSave": "onWindowChange",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
     "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingQuotes": "beforeWhitespace",
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "files.autoSaveDelay": 10000,
+    "files.autoSave": "afterDelay",
+
+    // 字体相关设置
+    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
     "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.formatOnType": true,
+    "files.autoGuessEncoding": true,
+
+    // 编辑器显示设置
+    "editor.editContext": false,
     "editor.suggest.filterGraceful": false,
     "editor.wordWrap": "on",
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "SynthWave '84",
+    "window.dialogStyle": "custom", // 窗口样式
+    "window.confirmSaveUntitledWorkspace": false,
+
+    // 设置为 false 可以关闭文件夹的紧凑模式
+    "explorer.compactFolders": false,
+    "git-graph.commitDetailsView.fileView.fileTree.compactFolders": false,
+    "scm.compactFolders": false,
+
+    // 光标和工作区平滑移动设置
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    "workbench.reduceMotion": "on",
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
 
     // Double Line 插件
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "relative", // 相对行号
     "editor.glyphMargin": true,
 
     // 杂项
-    "files.autoSave": "onWindowChange",
-    "window.dialogStyle": "custom", // 窗口样式
-    "window.confirmSaveUntitledWorkspace": false,
     "editor.mouseWheelZoom": true, // 允许鼠标滚轮滑动控制字体大小
     "debug.showBreakpointsInOverviewRuler": true, // 展示断点位置
     "explorer.confirmDelete": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "files.autoGuessEncoding": true,
     "explorer.confirmDragAndDrop": false,
-    "terminal.integrated.enableMultiLinePasteWarning": "auto",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "search.followSymlinks": false,
 
     // 代理设置
     "http.proxy": "http://127.0.0.1:7890",
@@ -41,21 +68,22 @@
     // Vim 编辑器设置
     "vim.useSystemClipboard": false,
     "vim.useCtrlKeys": false,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
 
     // Git 设置
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.openRepositoryInParentFolders": "never",
-    "github.copilot.editor.enableAutoCompletions": true,
     "git.enableSmartCommit": true,
+    "git.autorefresh": false,
+    "git.blame.editorDecoration.enabled": true,
 
     // 拼写检查
     "cSpell.enabled": true,
-    "cSpell.ignoreWords": ["Deralive", "ECNU", "ecnu"],
-
-    // FittenCode 自动补全设置
-    "fittencode.languagePreference.displayPreference": "zh-cn",
-    "fittencode.languagePreference.commentPreference": "zh-cn",
+    "cSpell.allowCompoundWords": true, // 允许 arraylength 之类的复合词
+    "cSpell.ignoreWords": ["Deralive", "ECNU", "ecnu", "Shichien"],
 
     // CPH 算法竞赛设置
     // 最好的 Vscode C++ 竞赛向配置教程：https://www.bilibili.com/video/BV1fVxCeVE9q
@@ -74,6 +102,7 @@
         "zig": "zig run",
         // 将编译标准修改为 C++20
         "cpp": "cd $dir && clang++ -std=c++20 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        // "cpp": "cd $dir && clang++ -fdiagnostics-color=always -g $fileName -o $workspaceRoot\\runner -lpthread && $workspaceRoot\\runner",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "python -u",
@@ -103,7 +132,7 @@
         "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
         "racket": "racket",
         "scheme": "csi -script",
-        "ahk": "autohotkey",
+        "ahk": "autohotkey /Restart",
         "autoit": "autoit3",
         "dart": "dart",
         "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
@@ -163,71 +192,23 @@
     "codesnap.backgroundColor": "#A4B0BB",
     "codesnap.boxShadow": "rgba(0, 0, 0, 0.6) 5px 5px 15px 5px",
 
-    // 主题设置
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "SynthWave '84",
-
     // Prettier 设置
     // 此处是全局设置，可以进入 https://prettier.io/playground 进行单语言设置
     "prettier.semi": true, // 句尾是否填加分号
     "prettier.singleQuote": false, //是否使用单引号
     "prettier.trailingComma": "none", //禁止随时添加逗号
-    "prettier.tabWidth": 4,
-    "prettier.printWidth": 200, //每行代码的限制长度
+    "prettier.tabWidth": 4, //每行代码的限制长度
     "prettier.proseWrap": "never", // 文本换行
     "prettier.bracketSpacing": true,
     "prettier.useEditorConfig": false, // 在对象字面量的花括号内侧使用空格作为间隔（true: { foo: bar } false: {foo: bar}）
     "prettier.bracketSameLine": true,
     "prettier.endOfLine": "auto",
 
-    // Peacock 多窗口显色设置
-    "peacock.favoriteColors": [
-        {
-            "name": "Red",
-            "value": "#FF6347"
-        },
-        {
-            "name": "Turquoise Blue",
-            "value": "#40E0D0"
-        },
-        {
-            "name": "JavaScript Yellow",
-            "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "Node Green",
-            "value": "#215732"
-        },
-        {
-            "name": "React Blue",
-            "value": "#61dafb"
-        },
-        {
-            "name": "Something Different",
-            "value": "#832561"
-        },
-        {
-            "name": "Svelte Orange",
-            "value": "#ff3d00"
-        },
-        {
-            "name": "Vue Green",
-            "value": "#42b883"
-        },
-        {
-            "name": "AntiqueWhite",
-            "value": "#FAEBD7"
-        }
-    ],
-
     // Latex 编辑设置
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
     },
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.showContextMenu": true,
     "latex-workshop.intellisense.package.enabled": true,
@@ -241,22 +222,50 @@
         {
             "name": "xelatex",
             "command": "xelatex",
-            "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOCFILE%"]
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
         },
         {
             "name": "pdflatex",
             "command": "pdflatex",
-            "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOCFILE%"]
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
         },
         {
             "name": "latexmk",
             "command": "latexmk",
-            "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "-outdir=%OUTDIR%", "%DOCFILE%"]
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ]
         },
         {
             "name": "bibtex",
             "command": "bibtex",
             "args": ["%DOCFILE%"]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": ["%DOCFILE%"]
+        },
+        {
+            "name": "latexindent",
+            "command": "latexindent",
+            "args": ["-c", "%DOCFILE_EXT%", "-y=defaultIndent: '    '", "-m"],
+            "env": {}
         }
     ],
     "latex-workshop.latex.recipes": [
@@ -283,6 +292,10 @@
         {
             "name": "pdflatex -> bibtex -> pdflatex*2",
             "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex*2",
+            "tools": ["xelatex", "biber", "xelatex", "xelatex"]
         }
     ],
     "latex-workshop.latex.clean.fileTypes": [
@@ -312,25 +325,7 @@
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
     "latex-workshop.view.pdf.viewer": "tab",
 
-    // IDF 编译设置
-    "idf.gitPathWin": "C:\\Users\\26421\\.espressif\\tools\\idf-git\\2.39.2\\cmd\\git.exe",
-    "idf.espIdfPathWin": "d:\\Espressif\\frameworks\\esp-idf-v5.3.1",
-    "idf.pythonBinPathWin": "C:\\Users\\26421\\.espressif\\python_env\\idf5.3_py3.11_env\\Scripts\\python.exe",
-    "idf.toolsPathWin": "C:\\Users\\26421\\.espressif",
-    "idf.customExtraPaths": "C:\\Users\\26421\\.espressif\\tools\\xtensa-esp-elf-gdb\\14.2_20240403\\xtensa-esp-elf-gdb\\bin;C:\\Users\\26421\\.espressif\\tools\\riscv32-esp-elf-gdb\\14.2_20240403\\riscv32-esp-elf-gdb\\bin;C:\\Users\\26421\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20240530\\xtensa-esp-elf\\bin;C:\\Users\\26421\\.espressif\\tools\\riscv32-esp-elf\\esp-13.2.0_20240530\\riscv32-esp-elf\\bin;C:\\Users\\26421\\.espressif\\tools\\esp32ulp-elf\\2.38_20240113\\esp32ulp-elf\\bin;C:\\Users\\26421\\.espressif\\tools\\cmake\\3.24.0\\bin;C:\\Users\\26421\\.espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20240318\\openocd-esp32\\bin;C:\\Users\\26421\\.espressif\\tools\\ninja\\1.11.1;C:\\Users\\26421\\.espressif\\tools\\idf-exe\\1.0.3;C:\\Users\\26421\\.espressif\\tools\\ccache\\4.8\\ccache-4.8-windows-x86_64;C:\\Users\\26421\\.espressif\\tools\\dfu-util\\0.11\\dfu-util-0.11-win64;C:\\Users\\26421\\.espressif\\tools\\esp-rom-elfs\\20240305",
-    "idf.customExtraVars": {
-        "OPENOCD_SCRIPTS": "C:\\Users\\26421\\.espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",
-        "IDF_CCACHE_ENABLE": "1",
-        "ESP_ROM_ELF_DIR": "C:\\Users\\26421\\.espressif\\tools\\esp-rom-elfs\\20240305/"
-    },
-    "idf.pythonInstallPath": "C:\\Users\\26421\\.espressif\\tools\\idf-python\\3.11.2\\python.exe",
-    "idf.hasWalkthroughBeenShown": true,
-
     // Typst 编辑设置
-    "[typst]": {
-        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-        "pasteImage.insertPattern": "#figure(\n  image(\"${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}\", width: 100%),\n  caption: \"\",\n) <>"
-    },
     "[typst-code]": {
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
@@ -348,13 +343,39 @@
     "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.typeCheckingMode": "standard",
+    "python.defaultInterpreterPath": "d:\\Python\\python.exe",
+    "python.createEnvironment.trigger": "off",
+
+    // 使用 Ruff 检查工具
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
 
     // 基于 Clang 的 Cpp 配置
-    "clangd.arguments": ["--query-driver=D:/llvm/bin/clang++.exe", "--header-insertion=never"],
+    "clangd.arguments": [
+        "--query-driver=D:/llvm/bin/clang++.exe",
+        "--header-insertion=never"
+    ],
     "clangd.fallbackFlags": ["-std=c++20"],
+    "clang-format.executable": "C:/Users/26421/.vscode/extensions/xaver.clang-format-1.9.0/clang-format",
+
+    "[c]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": false,
+        "editor.formatOnPaste": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
     // 让格式化工具走 4 缩进
     "[cpp]": {
-        "editor.defaultFormatter": "demiaochen.clang-format-indent-4"
+        "editor.formatOnSave": true,
+        "editor.formatOnType": false,
+        "editor.formatOnPaste": true,
+        "editor.defaultFormatter": "xaver.clang-format"
     },
 
     // 若不适用 Clang，而使用 Microsoft 自带的：
@@ -365,7 +386,10 @@
     "cmake.showOptionsMovedNotification": false,
     "cmake.configureOnOpen": true,
     "C_Cpp.default.compilerPath": "D:\\mingw64\\bin\\g++.exe",
-    "cmake.pinnedCommands": ["workbench.action.tasks.configureTaskRunner", "workbench.action.tasks.runTask"],
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
 
     // C++ 自动格式化操作
     "C_Cpp.formatting": "vcFormat",
@@ -405,6 +429,31 @@
     // Markdown 文件格式
     "markdown.extension.list.indentationSize": "inherit",
     "markdown.extension.tableFormatter.normalizeIndentation": true,
+    "markdownlint.config": {
+        "MD004": false,
+        "MD022": false,
+        "MD026": false,
+        "MD032": false,
+        "MD036": false,
+        "MD047": false
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+
+    // TypeScript 和 YAML 文件格式
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[csharp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
 
     // Toml 文件格式
     "evenBetterToml.formatter.indentEntries": true,
@@ -415,30 +464,89 @@
     "workbench.editorAssociations": {
         "*.copilotmd": "vscode.markdown.preview.editor",
         "{hexdiff}:/**/*.*": "hexEditor.hexedit",
-        "*.svg": "default"
+        "*.svg": "default",
+        "*.pdf": "latex-workshop-pdf-hook"
     },
 
     // 使用 PasteImage 自动填充
-    "pasteImage.path": "${currentFileDir}/assets/${currentFileNameWithoutExt}",
+    "pasteImage.path": "${currentFileDir}/images/${currentFileNameWithoutExt}",
     "pasteImage.defaultName": "YMMDDHHmmss",
     "pasteImage.namePrefix": "img-",
+    "pasteImage.insertPattern": "#figure(\n  image(\"${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}\", width: 80%),\n  caption: \"\",\n)",
 
-    "cSpell.userWords": ["Colorbox", "showybox"],
+    // 工作区默认全信任
+    "security.promptForLocalFileProtocolHandling": false,
+    "security.promptForRemoteFileProtocolHandling": false,
+    "security.restrictUNCAccess": false,
 
-    // Animations
-    "vscode_custom_css.imports": ["file:///c:/Users/26421/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"],
-    "animations.CursorAnimation": true,
-    "KeilAssistant.MDK.Uv4Path": "D:\\Keil5\\UV4\\UV4.exe",
+    // Copilot 设置
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
 
-    // 设置为 false 可以关闭文件夹的紧凑模式
-    "explorer.compactFolders": false,
-    "git-graph.commitDetailsView.fileView.fileTree.compactFolders": false,
-    "scm.compactFolders": false,
+    // SSH
+    "workbench.activityBar.location": "top",
+    "remote.SSH.remotePlatform": {
+        "deralive.top": "linux",
+        "connect.bjb2.seetacloud.com": "linux",
+        "connect.bjb1.seetacloud.com": "linux"
+    },
 
-    // 光标和工作区平滑移动设置
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorBlinking": "smooth",
-    "workbench.reduceMotion": "on",
-    "workbench.list.smoothScrolling": true,
-    "terminal.integrated.smoothScrolling": true
+    // JavaScript 和 TypeScript 设置
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnPaste.enabled": false,
+    "javascript.updateImportsOnPaste.enabled": false,
+
+    // SVG 设置
+    "svg.preview.mode": "svg",
+
+    // Terminal 设置
+    "terminal.integrated.stickyScroll.enabled": false,
+    "terminal.integrated.commandsToSkipShell": ["matlab.interrupt"],
+    "terminal.integrated.initialHint": false,
+
+    // Live Server 设置
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+
+    // Agent
+    "chat.viewSessions.orientation": "stacked",
+    "chat.agent.maxRequests": 200,
+    "diffEditor.maxComputationTime": 0
+
+    // 修改光标颜色
+    // "workbench.colorCustomizations": {
+    //     "editorCursor.foreground": "#FF0000",
+    //     "terminalCursor.foreground": "#FF0000"
+    // }
 }
+
+// 常用的快捷键
+// 使用 Ctrl + Tab 在多个窗口之间进行切换
+// 使用 Alt + Right / Left 对光标所处的上一个位置进行切换
+// 使用 Ctrl + Alt + Right / Left 将当前正在编辑的窗口移动到左侧或右侧
+// 使用 Ctrl + Alt + V 来粘贴图片
+
+// KoroFileheader 插件很可能会占用大量的时间（在保存文件时）
+// 命令 Show Running Extensions 可以查看插件目前占用的时长
+
+// 使用 CodeLLDB 调试 C++ 代码
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "type": "lldb",
+//             "request": "launch",
+//             "name": "Debug",
+//             "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+//             "args": [],
+//             "cwd": "${workspaceFolder}"
+//         }
+//     ]
+// }
