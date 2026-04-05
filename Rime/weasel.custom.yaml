@@ -1,0 +1,46 @@
+customization:
+    distribution_code_name: Weasel
+    distribution_version: 0.15.0
+    generator: "Weasel::Customization"
+    modified_time: "Fri Jan 16 2026"
+    rime_version: 1.10.0
+
+patch:
+    "style/color_scheme": blue_reverie
+    "style/font_face": "Microsoft YaHei UI"
+    "style/font_point": 11
+    "style/label_font_point": 11
+    "style/comment_font_point": 11
+    "style/horizontal": true # 横向显示
+    "style/inline_preedit": true # 嵌入式编码
+    "style/layout/border_width": 2 # 边框粗细
+    "style/layout/shadow_radius": 8 # 阴影扩散范围
+    "style/layout/shadow_offset_x": 2 # 阴影向右偏移
+    "style/layout/shadow_offset_y": 2 # 阴影向下偏移
+    "style/layout/hilite_padding": 6
+    "style/layout/margin_x": 10
+    "style/layout/margin_y": 10
+    "style/layout/corner_radius": 8 # 候选窗口圆角半径
+    "style/layout/round_corner": 10 # 候选背景色块圆角半径，又名 hilited_corner_radius
+
+    "preset_color_schemes/blue_reverie":
+        name: "蓝色遐想 / Blue Reverie"
+        author: HunterJi
+        # 界面背景
+        back_color: 0xFFFFFF # 白底
+        border_color: 0xC0C0C0 # 黑边
+        shadow_color: 0x40000000 # 半透明阴影
+        # 候选词文字
+        candidate_text_color: 0x5E5E5E # 候选项深灰
+        text_color: 0x000000 # 已上屏文字纯黑
+        # 编码行
+        hilited_back_color: 0x252320 # 深色条背景
+        hilited_text_color: 0xDEDDDD # 浅色编码文字
+        # 高亮选中的词
+        hilited_candidate_back_color: 0xFF7A00 # BGR蓝色
+        hilited_candidate_text_color: 0xFFFFFF # 选中白字
+        hilited_candidate_label_color: 0xFFFFFF
+        hilited_candidate_shadow_color: 0x50000000 # 选中半透明阴影
+        # 序号和其他
+        label_color: 0x888785
+        comment_text_color: 0x999999
