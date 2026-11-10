@@ -11,6 +11,8 @@ pixpin/win/PixPin.pixconf          pixpin/mac/PixPinConfig.json
 vscode_config/win/                 vscode_config/mac/
 Rime/win/  Rime/mac/               词库等通用部分留在 Rime/ 根目录
 starship/win/                      starship/mac/
+zsh/mac/                           （zsh 配置仅 macOS）
+fastfetch/mac/                     （fastfetch 配置仅 macOS）
 tmux/mac/tmux.conf                 （tmux 仅 macOS 使用）
 Karabiner/mac/                     （Karabiner 仅 macOS，无 win 目录）
 ```
@@ -24,6 +26,33 @@ Karabiner/mac/                     （Karabiner 仅 macOS，无 win 目录）
 - `ClashForWindows/cfw-settings.yaml` 与 `TrafficMonitor/config.ini` 更新为本机偏好，不包含代理订阅、节点配置或流量历史。
 - Windows DSH Desktop 配置另存于 `DSH/win/desktop-profile/`，不覆盖现有 `DSH/web-profile/`；恢复限制见 `DSH/win/README.md`。
 - Rime、Starship、Nushell、WezTerm 的实际设置无变化，本次不重复同步；不新增个人学习词库、运行缓存或凭据文件。
+
+## zsh 配置
+
+macOS 的 shell 启动链，位于 `zsh/mac/`，分别对应家目录下的同名点文件：
+
+| 文件 | 作用 |
+| --- | --- |
+| `.zshrc` | 主配置：别名、补全、fzf、fastfetch 启动、Kali 靶场函数 |
+| `.zprofile` | Homebrew `shellenv` 与 Python 路径 |
+| `.zshenv` | cargo 环境与 Python 路径（对所有 zsh 生效） |
+| `.shinit` / `.bashrc` / `.profile` / `.tcshrc` | 各 shell 的最小入口，多为加载 cargo 或 x-cmd |
+
+`.zshrc` 的主要内容：
+
+- **别名**：`ls`/`ll`/`la`/`tree` 走 `eza`，`cat`/`less` 走 `bat`（`BAT_THEME="Catppuccin Mocha"`）
+- **提示符**：starship，配置由 `STARSHIP_CONFIG` 指向 `~/.config/starship.toml`
+- **补全**：`zsh-completions` + `zsh-autosuggestions`（灰色联想），`zsh-syntax-highlighting` **必须最后加载**
+- **fzf**：`Ctrl+R` 历史、`Ctrl+T` 文件、`Alt+C` 目录
+- **代理**：`HTTP_PROXY` 等统一指向 `127.0.0.1:7890`，`NO_PROXY` 排除本机
+- **Kali 靶场**：`kali`、`kali-stop`、`lab` 三个函数，依赖 `$HOME/Downloads/kali-lab`
+- **fastfetch**：交互式终端启动时打印系统信息，tmux 内每个会话只打一次（用 `@ff_shown` 标记）
+
+> 注意：`.zshrc` 硬编码了 `/opt/homebrew`、`$HOME/.venvs/default`、`$HOME/Downloads/kali-lab`、`~/.x-cmd.root/X` 等 macOS 专属路径，换机器需相应调整。
+
+## fastfetch 配置
+
+`fastfetch/mac/config.jsonc`，对应 `~/.config/fastfetch/config.jsonc`：中文键名、Catppuccin 配色、`Apple_small` logo，被 `.zshrc` 在交互式启动时调用。
 
 ## VSCode 配置
 
