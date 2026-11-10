@@ -1,0 +1,529 @@
+{
+  "AHK++.v1.file": {
+    "helpPath": "C:/Program Files/AutoHotkey/v2/AutoHotkey.chm",
+    "interpreterPath": "C:/Program Files/AutoHotkey/v2/AutoHotkey64_UIA.exe"
+  },
+  "C_Cpp.default.compilerPath": "f:\\Coding Collection\\HelloWorld.cpp",
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4
+  },
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typst-code]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.allowCompoundWords": true,
+  "cSpell.enabled": true,
+  "cSpell.ignoreWords": [
+    "Deralive",
+    "ECNU",
+    "ecnu",
+    "Shichien"
+  ],
+  "chat.agent.enabled": false,
+  "chat.agent.maxRequests": 200,
+  "chat.viewSessions.orientation": "stacked",
+  "clang-format.executable": "C:/Users/26421/.vscode/extensions/xaver.clang-format-1.9.0/clang-format",
+  "clang.cflags": [
+    "-std=c99"
+  ],
+  "clang.cxxflags": [
+    "-std=c++11"
+  ],
+  "clangd.arguments": [
+    "--query-driver=D:/llvm/bin/clang++.exe",
+    "--header-insertion=never"
+  ],
+  "clangd.fallbackFlags": [
+    "-std=c++20"
+  ],
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.disableLoginPrompt": true,
+  "claudeCode.environmentVariables": [
+    {
+      "name": "ANTHROPIC_BASE_URL",
+      "value": "https://weapi.xyz"
+    },
+    {
+      "name": "API_TIMEOUT_MS",
+      "value": "3000000"
+    },
+    {
+      "name": "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC",
+      "value": "1"
+    },
+    {
+      "name": "ANTHROPIC_MODEL",
+      "value": "opus"
+    },
+    {
+      "name": "ANTHROPIC_SMALL_FAST_MODEL",
+      "value": "opus"
+    },
+    {
+      "name": "ANTHROPIC_DEFAULT_SONNET_MODEL",
+      "value": "opus"
+    },
+    {
+      "name": "ANTHROPIC_DEFAULT_OPUS_MODEL",
+      "value": "opus"
+    },
+    {
+      "name": "ANTHROPIC_DEFAULT_HAIKU_MODEL",
+      "value": "opus"
+    }
+  ],
+  "claudeCode.initialPermissionMode": "bypassPermissions",
+  "cmake.configureOnOpen": true,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "cmake.showOptionsMovedNotification": false,
+  "code-runner.executorMap": {
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "ahk": "autohotkey /Restart",
+    "applescript": "osascript",
+    "autoit": "autoit3",
+    "bat": "cmd /c",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "clojure": "lein exec",
+    "coffeescript": "coffee",
+    "cpp": "cd $dir && clang++ -std=c++20 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "crystal": "crystal",
+    "csharp": "scriptcs",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "dart": "dart",
+    "erlang": "escript",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fsharp": "fsi",
+    "gleam": "gleam run -m $fileNameWithoutExt",
+    "go": "go run",
+    "groovy": "groovy",
+    "haskell": "runghc",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "javascript": "node",
+    "julia": "julia",
+    "kit": "kitc --run",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "lisp": "sbcl --script",
+    "lua": "lua",
+    "mojo": "mojo run",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "ocaml": "ocaml",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "perl": "perl",
+    "perl6": "perl6",
+    "php": "php",
+    "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "python": "python -u",
+    "r": "Rscript",
+    "racket": "racket",
+    "ruby": "ruby",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "sass": "sass --style expanded",
+    "scala": "scala",
+    "scheme": "csi -script",
+    "scss": "scss --style expanded",
+    "shellscript": "bash",
+    "sml": "cd $dir && sml $fileName",
+    "spwn": "spwn build",
+    "swift": "swift",
+    "typescript": "ts-node",
+    "v": "v run",
+    "vbscript": "cscript //Nologo",
+    "zig": "zig run"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "codesnap.backgroundColor": "#A4B0BB",
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.6) 5px 5px 15px 5px",
+  "debug.showBreakpointsInOverviewRuler": true,
+  "diffEditor.maxComputationTime": 0,
+  "dsh.profile": "desktop",
+  "dsh.remote.enabled": true,
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.autoIndent": "full",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.editContext": false,
+  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.glyphMargin": true,
+  "editor.indentSize": "tabSize",
+  "editor.insertSpaces": true,
+  "editor.lineNumbers": "relative",
+  "editor.mouseWheelZoom": true,
+  "editor.suggest.filterGraceful": false,
+  "editor.tabSize": 4,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.wordWrap": "on",
+  "errorLens.borderRadius": "0.3em",
+  "errorLens.decorations": {
+    "errorMessage": {
+      "textDecoration": ";border:1.2px dashed #e4545470;text-shadow:1px 1px 2px #e4545470;border-radius:0.3em;padding:0 0.5ch;"
+    }
+  },
+  "errorLens.enableOnDiffView": true,
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "info"
+  ],
+  "errorLens.fontSize": "12px",
+  "errorLens.gutterIconSet": "circle",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.margin": "100px",
+  "errorLens.messageBackgroundMode": "message",
+  "errorLens.messageTemplate": "$severity $message",
+  "errorLens.padding": "2px 0.5ch",
+  "errorLens.severityText": [
+    "❌",
+    "⚠",
+    "ℹ",
+    "📗"
+  ],
+  "errorLens.statusBarColorsEnabled": true,
+  "evenBetterToml.formatter.indentEntries": true,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "explorer.fileNesting.patterns": {
+    "*.db": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.s3db": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.ts": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "Cargo.toml": "Cargo.lock",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "tsconfig.json": "tsconfig.*.json"
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "extensions.supportNodeGlobalNavigator": true,
+  "files.autoGuessEncoding": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10000,
+  "files.participants.timeout": 1,
+  "git-graph.commitDetailsView.fileView.fileTree.compactFolders": false,
+  "git.autofetch": true,
+  "git.autorefresh": false,
+  "git.blame.editorDecoration.enabled": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.ignoreMissingGitWarning": true,
+  "git.openRepositoryInParentFolders": "never",
+  "github.copilot.enable": {
+    "*": true,
+    "cpp": false,
+    "markdown": true,
+    "plaintext": false,
+    "scminput": false,
+    "typst": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "go.toolsManagement.autoUpdate": true,
+  "hediet.vscode-drawio.resizeImages": null,
+  "html.format.indentInnerHtml": true,
+  "http.proxy": "http://127.0.0.1:7890",
+  "http.proxyAuthorization": null,
+  "javascript.suggest.paths": false,
+  "javascript.updateImportsOnPaste.enabled": false,
+  "labuladong-leetcode.workspaceFolder": "C:\\Users\\26421\\.lcpr",
+  "latex-workshop.formatting.latex": "latexindent",
+  "latex-workshop.formatting.latexindent.path": "latexindent",
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.autoClean.run": "onFailed",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.synctex.gz",
+    "*.fdb_latexmk"
+  ],
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "XeLaTeX",
+      "tools": [
+        "xelatex"
+      ]
+    },
+    {
+      "name": "PDFLaTeX",
+      "tools": [
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "BibTeX",
+      "tools": [
+        "bibtex"
+      ]
+    },
+    {
+      "name": "LaTeXmk",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "xelatex -> bibtex -> xelatex*2",
+      "tools": [
+        "xelatex",
+        "bibtex",
+        "xelatex",
+        "xelatex"
+      ]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "xelatex -> biber -> xelatex*2",
+      "tools": [
+        "xelatex",
+        "biber",
+        "xelatex",
+        "xelatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ],
+      "command": "xelatex",
+      "name": "xelatex"
+    },
+    {
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ],
+      "command": "pdflatex",
+      "name": "pdflatex"
+    },
+    {
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOCFILE%"
+      ],
+      "command": "latexmk",
+      "name": "latexmk"
+    },
+    {
+      "args": [
+        "%DOCFILE%"
+      ],
+      "command": "bibtex",
+      "name": "bibtex"
+    },
+    {
+      "args": [
+        "%DOCFILE%"
+      ],
+      "command": "biber",
+      "name": "biber"
+    },
+    {
+      "args": [
+        "-c",
+        "%DOCFILE_EXT%",
+        "-y=defaultIndent: '    '",
+        "-m"
+      ],
+      "command": "latexindent",
+      "env": {},
+      "name": "latexindent"
+    }
+  ],
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.showContextMenu": true,
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "makefile.configureOnOpen": false,
+  "markdown-preview-enhanced.codeBlockTheme": "vscode.css",
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.tableFormatter.normalizeIndentation": true,
+  "markdownlint.config": {
+    "MD004": false,
+    "MD022": false,
+    "MD026": false,
+    "MD032": false,
+    "MD036": false,
+    "MD047": false
+  },
+  "pasteImage.defaultName": "YMMDDHHmmss",
+  "pasteImage.insertPattern": "#figure(\n  image(\"${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}\", width: 80%),\n  caption: \"\",\n)",
+  "pasteImage.namePrefix": "img-",
+  "pasteImage.path": "${currentFileDir}/images/${currentFileNameWithoutExt}",
+  "path-intellisense.autoSlashAfterDirectory": false,
+  "powershell.promptToUpdatePowerShell": false,
+  "prettier.bracketSameLine": true,
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "auto",
+  "prettier.proseWrap": "never",
+  "prettier.semi": true,
+  "prettier.singleQuote": false,
+  "prettier.tabWidth": 4,
+  "prettier.trailingComma": "none",
+  "prettier.useEditorConfig": false,
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.callArgumentNames": "off",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "python.createEnvironment.trigger": "off",
+  "python.terminal.useEnvFile": true,
+  "remote.SSH.remotePlatform": {
+    "connect.bjb1.seetacloud.com": "linux",
+    "connect.bjb2.seetacloud.com": "linux",
+    "deralive.top": "linux",
+    "server.deralive.top": "linux"
+  },
+  "scm.compactFolders": false,
+  "search.followSymlinks": false,
+  "security.promptForLocalFileProtocolHandling": false,
+  "security.promptForRemoteFileProtocolHandling": false,
+  "security.restrictUNCAccess": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "svg.preview.mode": "svg",
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "tinymist.formatterMode": "typstyle",
+  "typescript.suggest.paths": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnPaste.enabled": false,
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": false,
+  "window.confirmSaveUntitledWorkspace": false,
+  "window.dialogStyle": "custom",
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "SynthWave '84",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.csv": "default",
+    "*.pdf": "latex-workshop-pdf-hook",
+    "*.svg": "default",
+    "{hexdiff}:/**/*.*": "hexEditor.hexedit"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.list.smoothScrolling": true,
+  "workbench.reduceMotion": "on",
+  "workbench.startupEditor": "none",
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
+}

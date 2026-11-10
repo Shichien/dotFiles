@@ -2,9 +2,22 @@
 Stores Deralive's configuration files.
 仅供自查，可参考配置。
 
+## 目录约定
+
+跨平台通用的配置直接放在软件目录下；平台相关的配置按 `win/` 和 `mac/` 分子目录存放，不要混在一起：
+
+```
+pixpin/win/PixPin.pixconf          pixpin/mac/PixPinConfig.json
+vscode_config/win/                 vscode_config/mac/
+Rime/win/  Rime/mac/               词库等通用部分留在 Rime/ 根目录
+starship/win/                      starship/mac/
+tmux/mac/tmux.conf                 （tmux 仅 macOS 使用）
+Karabiner/mac/                     （Karabiner 仅 macOS，无 win 目录）
+```
+
 ## VSCode 配置
 
-于左下角 `设置->配置文件` 中可以直接导入 `vscode-config.code-profile`，可以一键配置：
+分 `win/` 与 `mac/` 两套。Windows 侧于左下角 `设置->配置文件` 中可以直接导入 `vscode_config/win/vscode-config.code-profile`，可以一键配置：
 - Plugins、Key Bindings、Themes、Workspace
 - 特色:
     - 使用 LLVM 实现走 Clang++ 编译 C++ 代码（注意：万能头文件应置于 v1/bits/stdc++.h 中）
@@ -17,8 +30,14 @@ Stores Deralive's configuration files.
     - 使用 `Ctrl + R` 看齐 Jetbrains 代码替换
     - Todo: 使用 `Shift + F6` 看齐变量名重构
 
+macOS 侧配置位于 `vscode_config/mac/`（`settings.json`、`keybindings.json`），对应 `~/Library/Application Support/Code/User/`。
+注意：mac 版 `settings.json` 中已剔除 `claudeCode.environmentVariables` 的 `ANTHROPIC_AUTH_TOKEN` 等密钥，还原时需自行补回。
+
 ## PixPin 配置
-一款优秀的截图软件，使用 `ALt + A` 截图。
+一款优秀的截图软件，使用 `Alt + A` 截图。
+
+- `pixpin/win/PixPin.pixconf`：Windows 版，导入用
+- `pixpin/mac/PixPinConfig.json`：macOS 版，对应 `~/Library/Application Support/PixPin/Config/PixPinConfig.json`
 
 ## Vimium C 配置
 基于 Chrome 内核的浏览器使用的 Vim 插件，删除不必要的键位，适配逻辑操作：
@@ -142,3 +161,37 @@ macOS 终端 Ghostty 的配置，位于 `ghostty/config`，对应 `~/.config/gho
 - 启动即 `tmux new-session`，每个窗口/分屏独立会话，避免多客户端共用同一窗口
 - 快捷键：`cmd+t` 新建 tab、`cmd+d` 右侧分屏、`cmd+shift+d` 下方分屏
 - 透明标题栏并隐藏左侧 proxy icon
+
+## Karabiner 配置
+
+仅 macOS，位于 `Karabiner/mac/`：
+
+| 文件 | 说明 |
+| --- | --- |
+| `karabiner.json` | 本机完整配置，对应 `~/.config/karabiner/karabiner.json` |
+| `daily.json` | 日常键位规则，含「左 Shift 单击切输入法」 |
+| `RemoteControl` | 远控规则（Moonlight 下 Fn→Ctrl、Opt→Win、Cmd→Alt） |
+
+- `daily.json` 比本机 `karabiner.json` 内嵌的 daily 规则多一条：左 Shift 单击 → `Option+Space` 切换输入法，长按 → Shift
+- 若要在 Karabiner 中单独导入 `daily.json` / `RemoteControl`，用 Complex Modifications 的「Add rule」从文件添加
+
+## Rime 配置
+
+输入法配置，按前端分平台，**词库与方案为两平台共用**：
+
+- `Rime/` 根目录：`cn_dicts`、`en_dicts`、`lua`、`opencc`、`*.schema.yaml`、`*.dict.yaml`、`default*.yaml`、`user.yaml` 等共用内容
+- `Rime/win/`：Windows 小狼毫（Weasel）的 `weasel.yaml`、`weasel.custom.yaml`、`installation.yaml`
+- `Rime/mac/`：macOS 鼠须管（Squirrel）的 `squirrel.yaml`、`installation.yaml`
+
+部署时把根目录内容与对应平台子目录一起复制到 Rime 用户目录（Windows 通常是 `%APPDATA%\Rime`，macOS 是 `~/Library/Rime`）。
+
+## starship 配置
+
+按平台分开：
+
+- `starship/win/starship.toml`：Windows 版，十六进制配色，`[os]` 关闭
+- `starship/mac/starship.toml`：macOS 版，使用 `catppuccin_mocha` 调色板，对应 `~/.config/starship.toml`
+
+## tmux 配置
+
+仅 macOS，`tmux/mac/tmux.conf`，对应 `~/.config/tmux/tmux.conf`：`Ctrl-a` 前缀、Catppuccin Mocha 状态栏、`window-size latest` 等。Ghostty 启动时会自动 `tmux new-session`。
