@@ -1,13 +1,85 @@
 {
   "name": "dsh-profile-web",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@dougen/dsh-deepseek-usage": "^0.18.16",
+    "dsh-better-sidebar": "^0.28.2",
+    "dsh-browser": "github:Shichien/dsh-browser#8b3f5d14b0fb07973ceef4937d57e6353786398c",
+    "dsh-chat-import": "^0.26.3",
+    "dshmarket": "1.73.5",
+    "ds-harness-remote": "0.6.4",
+    "dsh-client-auto-continue": "0.17.4",
+    "dsh-opencode-palette": "2.1.12",
+    "@michengai/dsh-archive-manager": "1.2.8",
+    "@michengai/dsh-codex-ui": "2.0.19"
+  },
   "dsh": {
     "profile": {
       "bundles": [
         "@deepseek-ai/dsh-base",
-        "@deepseek-ai/dsh-web-app"
+        "@deepseek-ai/dsh-web-app",
+        "dsh-better-sidebar",
+        "dsh-browser",
+        "dsh-chat-import",
+        "dshmarket",
+        "@dougen/dsh-deepseek-usage",
+        "@michengai/dsh-archive-manager",
+        "@michengai/dsh-codex-ui",
+        "ds-harness-remote",
+        "dsh-client-auto-continue",
+        "dsh-opencode-palette"
       ]
+    },
+    "desktop": {
+      "generationProjection": {
+        "version": 1,
+        "plugins": {
+          "ds-harness-remote": {
+            "generationId": "ds-harness-remote+0.6.4+0e5d95656791",
+            "visibleVersion": "0.6.4",
+            "previousOverride": {
+              "present": false
+            }
+          },
+          "dsh-client-auto-continue": {
+            "generationId": "dsh-client-auto-continue+0.17.4+68947e906ff5",
+            "visibleVersion": "0.17.4",
+            "previousOverride": {
+              "present": false
+            }
+          },
+          "dsh-opencode-palette": {
+            "generationId": "dsh-opencode-palette+2.1.12+0c6ddc1f9313",
+            "visibleVersion": "2.1.12",
+            "previousOverride": {
+              "present": false
+            }
+          },
+          "@michengai/dsh-archive-manager": {
+            "generationId": "michengai+dsh-archive-manager+1.2.8+c82b2eee23fb",
+            "visibleVersion": "1.2.8",
+            "previousOverride": {
+              "present": false
+            }
+          },
+          "@michengai/dsh-codex-ui": {
+            "generationId": "michengai+dsh-codex-ui+2.0.19+c8c0e1bead65",
+            "visibleVersion": "2.0.19",
+            "previousOverride": {
+              "present": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "ds-harness-remote": "link:../.generations/live/ds-harness-remote+0.6.4+0e5d95656791/node_modules/ds-harness-remote",
+      "dsh-client-auto-continue": "link:../.generations/live/dsh-client-auto-continue+0.17.4+68947e906ff5/node_modules/dsh-client-auto-continue",
+      "dsh-opencode-palette": "link:../.generations/live/dsh-opencode-palette+2.1.12+0c6ddc1f9313/node_modules/dsh-opencode-palette",
+      "@michengai/dsh-archive-manager": "link:../.generations/live/michengai+dsh-archive-manager+1.2.8+c82b2eee23fb/node_modules/@michengai/dsh-archive-manager",
+      "@michengai/dsh-codex-ui": "link:../.generations/live/michengai+dsh-codex-ui+2.0.19+c8c0e1bead65/node_modules/@michengai/dsh-codex-ui"
     }
   }
 }
