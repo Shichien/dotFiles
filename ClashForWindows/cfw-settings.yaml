@@ -1,5 +1,5 @@
 showNewVersionIcon: false
-hideAfterStartup: false
+hideAfterStartup: true
 randomControllerPort: true
 systemTheme: true
 connProxy: 1
@@ -28,13 +28,11 @@ mixinText: |
         - https://8.8.4.4/dns-query
       fake-ip-filter:
         - +.*   # 模拟 redir-host
-bypassText: |
+bypassText: |-
   bypass:
     - "*.steamchina.com"
-    - "mail.qq.com"
-    - "hello.zhangsan.shop"
-    - "www.bilibili.com"
-    - "blog.csdn.net"
+    - "csgo.wmsj.cn"
+    - "dota2.wmsj.cn"
     - "wmsjsteam.com"
     - "dl.steam.clngaa.com"
     - "dl.steam.ksyna.com"
@@ -49,6 +47,8 @@ bypassText: |
     - "steampipe-partner.akamaized.net"
     - "steampipe.akamaized.net"
     - "*.steamcontent.com"
+    - dsh.r2049.cn
+    - r2049.cn
     - localhost
     - 127.*
     - 10.*
@@ -72,6 +72,13 @@ bypassText: |
     - 172.31.*
     - 192.168.*
     - <local>
+    - cctypekit.adobe.io
+    - lcs-cops.adobe.io
+    - cc-api-data.adobe.io
+    - ic.aodbe.io
+    - lcs-robs.adobe.io
+    - pojvrj7ho5.adobe.io
+    - "*.adobe.io"
 pacContentText: >-
   function FindProxyForURL(url, host) {
     // return "PROXY 127.0.0.1:%mixed-port%; SOCKS5 127.0.0.1:%mixed-port%; DIRECT;"
@@ -86,7 +93,7 @@ trayOrders:
 hideTrayIcon: false
 connShowProcess: true
 showTrayProxyDelayIndicator: false
-shortcutSystemProxy: NumLock
+showNotifications: true
+theme: 1
 useSystemEmoji: true
 trayColorTransparent: false
-lightweightMode: false

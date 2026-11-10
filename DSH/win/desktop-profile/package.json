@@ -1,0 +1,31 @@
+{
+  "name": "dsh-profile-desktop",
+  "private": true,
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "dsh-better-sidebar",
+        "dshmarket",
+        "@michengai/dsh-codex-ui",
+        "@deepseek-ai/dsh-experimental-inspector-profile",
+        "@deepseek-ai/dsh-experimental-auto-review",
+        "@michengai/dsh-archive-manager",
+        "dsh-client-auto-continue",
+        "ds-harness-remote",
+        "dsh-opencode-palette"
+      ],
+      "patchReload": "live"
+    }
+  },
+  "dependencies": {
+    "@michengai/dsh-archive-manager": "1.1.12",
+    "@michengai/dsh-codex-ui": "1.1.49",
+    "ds-harness-remote": "0.6.4",
+    "dsh-better-sidebar": "0.28.2",
+    "dsh-client-auto-continue": "0.17.0",
+    "dsh-opencode-palette": "2.1.12",
+    "dshmarket": "1.70.2"
+  }
+}

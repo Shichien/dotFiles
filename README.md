@@ -15,6 +15,16 @@ tmux/mac/tmux.conf                 （tmux 仅 macOS 使用）
 Karabiner/mac/                     （Karabiner 仅 macOS，无 win 目录）
 ```
 
+## Windows 本机同步（2026-11-10）
+
+- Windows 配置以本机当前设置为准，macOS 配置保持不变。
+- `pixpin/win/PixPin.pixconf` 更新自本机 PixPin，保留导入格式，移除存储时间戳、翻译密钥及网络代理字段；恢复后按需自行补回。
+- `vscode_config/win/` 同步当前设置和快捷键，导入用 profile 内的设置/快捷键同步更新，扩展清单保留原版本；认证信息不入库。机器路径和程序依赖仍需按目标电脑调整。
+- `vscode_config/win/snippets/latex.json` 为本机 LaTeX 用户片段，恢复到 VS Code 用户目录的 `snippets/` 下；当前 `Ctrl+Alt+B` 依赖工作区任务 `C++: Run active file (build + run + clean)`，本机没有用户级 tasks 文件，本仓库不自动创建该任务。
+- `ClashForWindows/cfw-settings.yaml` 与 `TrafficMonitor/config.ini` 更新为本机偏好，不包含代理订阅、节点配置或流量历史。
+- Windows DSH Desktop 配置另存于 `DSH/win/desktop-profile/`，不覆盖现有 `DSH/web-profile/`；恢复限制见 `DSH/win/README.md`。
+- Rime、Starship、Nushell、WezTerm 的实际设置无变化，本次不重复同步；不新增个人学习词库、运行缓存或凭据文件。
+
 ## VSCode 配置
 
 分 `win/` 与 `mac/` 两套。Windows 侧于左下角 `设置->配置文件` 中可以直接导入 `vscode_config/win/vscode-config.code-profile`，可以一键配置：

@@ -1,0 +1,132 @@
+{
+	// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"begin-end": {
+		"prefix": "be",
+		"body": [
+			"\\begin{$1}",
+			"$2",
+			"\\end{$1}"
+		],
+		"description": "Begin and end environment"
+	},
+	"theorem-environment": {
+		"prefix": "th",
+		"body": [
+			"\\begin{theorem}",
+			"$1",
+			"\\end{theorem}"
+		],
+		"description": "Theorem environment"
+	},
+	"definition-environment": {
+		"prefix": "de",
+		"body": [
+			"\\begin{definition}",
+			"$1",
+			"\\end{definition}"
+		],
+		"description": "Definition environment"
+	},
+	"solution-environment": {
+		"prefix": "so",
+		"body": [
+			"\\begin{solution}",
+			"$1",
+			"\\end{solution}"
+		],
+		"description": "Solution environment",
+	},
+	"example-environment": {
+		"prefix": "ex",
+		"body": [
+			"\\begin{example}",
+			"$1",
+			"\\end{example}"
+		],
+		"description": "Example environment",
+	},
+	"corollary-environment": {
+		"prefix": "co",
+		"body": [
+			"\\begin{corollary}",
+			"$1",
+			"\\end{corollary}"
+		],
+		"description": "Corollary environment",
+	},
+	"figure": {
+		"prefix": "fig",
+		"body": [
+			"\\begin{figure} [H]",
+			"    \\centering",
+			"    \\includegraphics[width=0.8\\textwidth]{${2:filename}}",
+			"    \\caption{$3}",
+			"    \\label{fig:$4}",
+			"\\end{figure}"
+		],
+		"description": "Insert a figure with caption and label"
+	},
+	"itemize": {
+		"prefix": "it",
+		"body": [
+			"\\begin{itemize}",
+			"    \\item $1",
+			"\\end{itemize}",
+		],
+		"description": "Itemize environment",
+	},
+	"Underline": {
+		"prefix": "ul",
+		"body": [
+			"\\underline{\\qquad}",
+		],
+		"description": "Underline text"
+	},
+	"V-Space": {
+		"prefix": "vs",
+		"body": [
+			"\\vspace{10em}",
+			"$2"
+		],
+		"description": "Vertical space in LaTeX"
+	},
+	"Code-Block": {
+		"prefix": "qqq",
+		"body": [
+			"\\begin{lstlisting}[language=python, caption={$2}, label={lst:$3}]",
+			"$4",
+			"\\end{lstlisting}"
+		],
+		"description": "Insert a code block with caption and label"
+	},
+	"Wrap in itemize": {
+		"prefix": "wrap-itemize",
+		"body": [
+			"\\begin{itemize}",
+			"\t${TM_SELECTED_TEXT/^(.*)$/\\item $1/gm}",
+			"\\end{itemize}"
+		],
+		"description": "将选中的每一行转换为 item，并用 itemize 环境包裹"
+	},
+	"Python Environment": {
+		"prefix": "py",
+		"body": [
+			"\\begin{lstlisting}[style=python]",
+			"$1",
+			"\\end{lstlisting}"
+		],
+		"description": "将选中的每一行转换为 item，并用 itemize 环境包裹"
+	}
+}

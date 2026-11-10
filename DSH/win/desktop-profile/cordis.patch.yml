@@ -1,0 +1,307 @@
+- id: desktop-shell
+  name: dsh-plugin-desktop
+  config:
+    mode: extended
+    openBrowser: false
+    networkExposure: loopback
+    logLevel: warn
+    developerLogging: true
+- id: ui-settings-general
+  name: "@deepseek-ai/dsh-client-ui-settings-general"
+  config:
+    welcomeNoticeVersion: 2026-08-13.1
+- id: agent-preset-registry
+  name: "@deepseek-ai/dsh-agent-preset-registry"
+  config:
+    default: standard
+    selectedDefault: standard
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      apig:
+        displayName: 小猪窝
+        apiKeyEnv: APIG_API_KEY
+        api: openai-responses
+        baseURL: https://oinkie.top/
+        defaultInput:
+          - text
+          - image
+        models:
+          - id: codex-auto-review
+            name: codex-auto-review
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              off: null
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+          - id: gpt-5.6-sol
+            name: gpt-5.6-sol
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              off: null
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+          - id: gpt-6-astra
+            name: gpt-6-astra
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+          - id: gpt-6-sol
+            name: gpt-6-sol
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              off: null
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+          - id: gpt-6.1-sol
+            name: gpt-6.1-sol
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+          - id: grok-4.7
+            name: grok-4.7
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+          - id: grok-4.6
+            name: grok-4.6
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+          - id: deepseek-v4.1-flash
+            name: deepseek-v4.1-flash
+            maxTokens: 65536
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: high
+              high: high
+              max: max
+          - id: glm-5.3-flash
+            name: glm-5.3-flash
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: high
+              high: high
+              max: max
+          - id: kimi-k3
+            name: kimi-k3
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: high
+              high: high
+              max: max
+          - id: claude-opus-5-5
+            name: claude-opus-5-5
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+          - id: claude-sonnet-4-5-20250929
+            name: claude-sonnet-4-5-20250929
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+          - id: claude-sonnet-5-5
+            name: claude-sonnet-5-5
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+          - id: gemini-4-argon
+            name: gemini-4-argon
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+          - id: gemini-4-argon-high
+            name: gemini-4-argon-high
+            input:
+              - text
+              - image
+            reasoningEfforts:
+              low: low
+              medium: medium
+              high: high
+          - id: claude-opus-4-5
+            name: claude-opus-4-5
+          - id: claude-opus-4-6
+            name: claude-opus-4-6
+          - id: claude-opus-4-7
+            name: claude-opus-4-7
+          - id: claude-opus-4-8
+            name: claude-opus-4-8
+          - id: claude-opus-5
+            name: claude-opus-5
+          - id: gpt-5.6-luna
+            name: gpt-5.6-luna
+          - id: gemini-3-flash-preview
+            name: gemini-3-flash-preview
+          - id: gemini-3.1-flash-image
+            name: gemini-3.1-flash-image
+          - id: gemini-3.1-pro-preview
+            name: gemini-3.1-pro-preview
+          - id: gemini-3.5-flash
+            name: gemini-3.5-flash
+          - id: gemini-3.8-flash
+            name: gemini-3.8-flash
+          - id: glm-5.2
+            name: glm-5.2
+          - id: glm-5.3
+            name: glm-5.3
+          - id: glm-5.3-flashx
+            name: glm-5.3-flashx
+          - id: kimi-k3.1-pro
+            name: kimi-k3.1-pro
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: apig
+    model: gpt-6-astra
+    reasoningEffort: low
+- id: permission
+  name: "@deepseek-ai/dsh-permission-presets"
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access
+- id: ui-theme
+  name: "@deepseek-ai/dsh-client-ui-theme"
+  config:
+    preference: dark
+    fontSize: 14
+- id: desktop-notifications
+  name: dsh-plugin-desktop/notifications
+  config:
+    enabled: true
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: verbose
+- id: session-log-deepseek
+  name: "@deepseek-ai/dsh-session-log-deepseek"
+  config:
+    enabled: false
+- id: auto-continue
+  name: dsh-client-auto-continue
+  config: {}
+- id: codex-subscription
+  name: dsh-codex-subscription
+  config:
+    connectionMode: websocket
+    quickQuotaMode: bar
+    searchProvider: codex
+    outputVerbosity: high
+    reasoningSummary: detailed
+    retryPolicy: "10"
+    connectors: ask
+    inputImageDetail: original
+    imageSketch: true
+    quotaAlerts: off
+- id: better-sidebar
+  name: dsh-better-sidebar
+  config:
+    agentOpenTools: true
+    customCss: |
+      /* 聊天正文的加粗文字：橙色、放大 */
+      [class*="_markdown_"] strong {
+        color: #ff9e64 !important;
+        font-size: 1.12em;
+      }
+      [class*="_markdown_"] :where(h1, h2, h3, h4, h5, h6) strong {
+        font-size: inherit;
+      }
+- id: remote-web-ui
+  name: "@linxin666/dsh-remote-web-ui"
+  config:
+    autoTunnel: true
+    publicBaseUrl: https://oinkie.top/
+  disabled: true
+- id: deepseek-usage
+  name: "@dougen/dsh-deepseek-usage"
+  disabled: true
+- id: connection
+  config:
+    cookieMaxAgeDays: 3650
+- insert:
+    - id: dsh-vscode-bridge
+      name: dsh-vscode-bridge
+- insert:
+    - id: mcp-xiaohongshu
+      name: "@deepseek-ai/dsh-mcp-client"
+      config:
+        serverName: xiaohongshu
+        transport: streamable-http
+        url: http://127.0.0.1:18060/mcp
+        toolCallTimeoutMs: 180000
