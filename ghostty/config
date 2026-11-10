@@ -1,0 +1,44 @@
+# Ghostty 配置 —— 配色与 starship 的 catppuccin_mocha 配套
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+# 跟随系统深浅色：暗色用 Mocha，亮色用 Latte
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+
+# 视觉：留白 + 透明 + 模糊，是"炫"的主要来源
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+background-opacity = 0.94
+background-blur-radius = 24
+
+# 分屏时非焦点窗格变暗，一眼看出焦点在哪
+unfocused-split-opacity = 0.85
+
+# 提示符换行后，留一点行距，色块不粘
+adjust-cell-height = 10%
+
+cursor-style = block
+cursor-style-blink = true
+cursor-text = "#181825"
+
+# 窗口：透明标题栏 + 隐藏按钮旁边的边框
+macos-titlebar-style = transparent
+macos-window-shadow = true
+window-save-state = always
+
+# 自动启动 tmux，保留已配置的底部状态栏。
+# 每个 Ghostty 窗口/分屏创建独立会话，不重复 attach 到 main，
+# 避免多个不同尺寸的客户端共享同一窗口。
+command = /opt/homebrew/bin/tmux new-session
+shell-integration = zsh
+
+# 选中即复制
+copy-on-select = clipboard
+
+# 快捷键：新建 tab / 分屏都留在 Ghostty 里
+keybind = cmd+t=new_tab
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+
+# 隐藏标题栏左侧的 app 图标（proxy icon）
+macos-titlebar-proxy-icon = hidden

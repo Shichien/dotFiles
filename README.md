@@ -116,3 +116,29 @@ Stores Deralive's configuration files.
 - [AudioRelay](https://audiorelay.net/)：可通过 USB 网络共享建立局域网，将电脑音频和手机音频同时在一个蓝牙耳机中进行播放
 - [Bluetooth Activity Viewer](https://www.nirsoft.net/utils/bluetooth_viewer.html)：可以实时查看 PC 端检测到的蓝牙设备，查看连接日志
 - [WinToys](https://apps.microsoft.com/detail/9p8ltpgcbzxd?launch=true&mode=full&hl=zh-cn&gl=us&ocid=bingwebsearch)：Windows 使用提升
+
+## DSH 配置
+
+[DSH](https://github.com/deepseek-ai/dsh)（DeepSeek Harness）的 Web profile 配置，位于 `DSH/web-profile/`，对应 `~/.dsh/profiles/web/`：
+
+| 文件 | 说明 |
+| --- | --- |
+| `cordis.yml` | profile 根入口，保持为空数组，实际配置由补丁层叠加 |
+| `cordis.patch.yml` | 主要的补丁层：模型供应商、默认模型、权限预设、主题、插件开关 |
+| `package.json` | 声明 profile 使用的 bundle |
+| `pnpm-workspace.yaml` | pnpm 工作区设置 |
+
+- 模型供应商 `apig` 通过 `apiKeyEnv` 引用环境变量 `APIG_API_KEY`，**密钥不写入配置**，需自行 `export`
+- 权限默认 `danger-full-access`，主题 dark、字号 14
+- 恢复方式：把 `DSH/web-profile/` 下的文件复制回 `~/.dsh/profiles/web/`，再重启 DSH
+
+## Ghostty 配置
+
+macOS 终端 Ghostty 的配置，位于 `ghostty/config`，对应 `~/.config/ghostty/config`：
+
+- 字体 `JetBrainsMono Nerd Font` 14pt，主题跟随系统深浅色切换 `Catppuccin Mocha / Latte`
+- 视觉：`window-padding` 12/10、`background-opacity 0.94` + `background-blur-radius 24`、非焦点分屏变暗
+- 光标为闪烁的 block 样式，选中即复制（`copy-on-select = clipboard`）
+- 启动即 `tmux new-session`，每个窗口/分屏独立会话，避免多客户端共用同一窗口
+- 快捷键：`cmd+t` 新建 tab、`cmd+d` 右侧分屏、`cmd+shift+d` 下方分屏
+- 透明标题栏并隐藏左侧 proxy icon
